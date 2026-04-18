@@ -21,12 +21,13 @@ This is a cloud-based web scraping system for competitor product parameter analy
 
 - **Language**: Python 3.11
 - **Orchestration**: OpenClaw (cloud DAG scheduler)
-- **Database**: PostgreSQL 14+
+- **Database**: SQLite 3 (default, lightweight) + Parquet (batch snapshots) | PostgreSQL 14+ (upgrade path)
 - **Scraping**: httpx + playwright (for dynamic pages)
 - **Parsing**: lxml / beautifulsoup4
 - **Data Processing**: pandas
+- **Analytics** (optional): duckdb
 - **Excel Export**: openpyxl
-- **ORM**: sqlalchemy + psycopg2
+- **ORM**: sqlalchemy + sqlite3 (builtin) + pyarrow (Parquet) | psycopg2 (PostgreSQL upgrade)
 - **Logging**: structlog or logging (JSON format)
 - **Containerization**: Docker + Docker Compose (recommended)
 
@@ -38,31 +39,65 @@ This is a cloud-based web scraping system for competitor product parameter analy
 2. `crawl_product_catalog` - Fetch product catalog and detail URLs
 3. `fetch_product_detail` - Scrape individual product pages
 4. `extract_and_normalize_specs` - Extract and standardize specification fields
-5. `detect_data_quality_issues` - Identify data quality problems
-6. `merge_manual_inputs` - Incorporate manual corrections/appendments
+5. `merge_manual_inputs` - **Merge manual corrections/appendments BEFORE quality check**
+6. `detect_data_quality_issues` - Identify data quality problems (on merged data)
 7. `export_excel_report` - Generate Excel artifacts
 8. `notify_run_summary` - Send execution summary
 
-### Module Structure
+**Important**: Manual inputs are merged BEFORE quality detection, so quality checks run on the final data.
+
+### Module Structure (Updated for Parallel Development)
 
 ```
 src/
-├── adapters/              # Site-specific adapters (hikvision_adapter.py, dahua_adapter.py)
-├── pipeline/              # DAG task implementations
-│   ├── discover_hierarchy.py
-│   ├── crawl_catalog.py
-│   ├── fetch_detail.py
-│   ├── extract_specs.py
-│   ├── normalize_specs.py
-│   ├── detect_issues.py
-│   ├── merge_manual.py
-│   └── export_excel.py
-├── core/                  # Shared utilities
+├── core/                  # Shared infrastructure
 │   ├── config.py
-│   ├── db.py
-│   ├── models.py
 │   ├── logging.py
-│   └── utils.py
+│   ├── constants.py
+│   └── types.py           # Frozen data structures
+├── storage/               # Data layer (SQLite + Parquet)
+│   ├── db.py
+│   ├── schema.py          # Frozen DB schema
+│   ├── repo_hierarchy.py
+│   ├── repo_catalog.py
+│   ├── repo_specs.py
+│   ├── repo_issues.py
+│   └── parquet_store.py
+├── adapters/              # Site-specific adapters
+│   ├── base_adapter.py    # Common interface
+│   ├── hikvision_adapter.py
+│   └── dahua_adapter.py
+├── crawler/               # HTTP & page fetching infrastructure
+│   ├── http_client.py
+│   ├── page_fetcher.py
+│   ├── hierarchy_discovery.py
+│   ├── catalog_collector.py
+│   └── detail_collector.py
+├── extractor/             # Field extraction & normalization
+│   ├── field_registry.py  # Frozen field codes from field_dictionary_v1.md
+│   ├── spec_extractor.py
+│   ├── normalizer.py
+│   └── parsers/
+│       ├── resolution_parser.py
+│       ├── stream_parser.py
+│       └── range_parser.py
+├── quality/               # Data quality rules
+│   ├── issue_rules.py
+│   └── issue_detector.py
+├── pipeline/              # OpenClaw DAG tasks
+│   ├── tasks_discover.py
+│   ├── tasks_collect.py
+│   ├── tasks_extract.py
+│   ├── tasks_quality.py
+│   ├── tasks_merge_manual.py
+│   ├── tasks_export.py
+│   └── dag.py
+├── export/                # Excel & reporting
+│   ├── excel_writer.py
+│   └── run_summary_writer.py
+├── manual/                # Manual input handling
+│   ├── manual_importer.py
+│   └── override_service.py
 └── mappings/              # Field mappings and normalization rules
     ├── field_alias.yaml
     └── unit_rules.yaml
@@ -143,10 +178,16 @@ crawler:
   retry_times: 3
 
 storage:
-  postgres_dsn: "postgresql://user:pass@host:5432/competitor"
+  sqlite_path: "/data/db/competitor.db"
+  parquet_dir: "/data/parquet"
+  duckdb_path: "/data/db/analytics.duckdb"  # optional
   artifact_dir: "/data/artifacts"
   raw_snapshot_dir: "/data/raw_html"
 ```
+
+**Storage Strategy (Lightweight First)**:
+- **Default**: SQLite for structured data + Parquet for batch snapshots
+- **Upgrade to PostgreSQL when**: >100k daily records, high concurrent writes, or complex analytics needed
 
 ## Key Design Principles
 
@@ -223,6 +264,35 @@ Each run generates `competitor_specs_<run_id>.xlsx` with sheets:
 
 ### Database Deduplication Key
 Unique constraint on: `(brand, series_l1, series_l2, product_model, locale)`
+
+### Frozen Contracts (for parallel development)
+1. **Field codes**: Defined in `docs/field_dictionary_v1.md` - 19 fields with standardization rules
+2. **Data structures**: `HierarchyNode`, `CatalogItem`, `SpecRecord`, `QualityIssue` in `src/core/types.py`
+3. **DB schema**: Defined in `src/storage/schema.py`
+4. **Adapter interfaces**: `BrandAdapter` protocol in `src/adapters/base_adapter.py`
+5. **Excel format**: Fixed sheet structure and column order in `src/export/excel_writer.py`
+
+## Parallel Development Strategy
+
+This project uses a 9-agent parallel development approach (see `docs/整体技术设计_v0.2_并行开发拆分.md`):
+
+| Agent | Module | Files | Dependencies |
+|-------|--------|-------|--------------|
+| A | Core/Config | `src/core/*` | None |
+| B | Storage | `src/storage/*` | Agent-A |
+| I | Crawler Infra | `src/crawler/*` | Agent-A |
+| C | Hikvision Adapter | `src/adapters/hikvision_adapter.py` | Agent-A, Agent-I |
+| D | Dahua Adapter | `src/adapters/dahua_adapter.py` | Agent-A, Agent-I |
+| E | Extractor/Normalizer | `src/extractor/*` | Agent-A |
+| F | Quality Rules | `src/quality/*` | Agent-E |
+| G | Pipeline/DAG | `src/pipeline/*` | All above |
+| H | Export/Manual | `src/export/*`, `src/manual/*` | Agent-B, Agent-G |
+
+**Integration Order**:
+1. Week 1: Agent-A + Agent-B (infrastructure)
+2. Week 1-2: Agent-C, D, E, F, I (parallel modules)
+3. Week 2: Agent-G (orchestration)
+4. Week 3: Agent-H (delivery + integration testing)
 
 ## Run ID Format
 
