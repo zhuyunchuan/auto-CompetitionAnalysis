@@ -1,7 +1,7 @@
-# PRD v0.6 - 竞品参数抓取与整理（云端 OpenClaw）
+# PRD v0.7 - 竞品参数抓取与整理（云端 OpenClaw）
 
 ## 1. 文档信息
-- 文档版本：v0.6
+- 文档版本：v0.7
 - 日期：2026-04-18
 - 项目阶段：Phase 1（仅抓取与整理）
 - 部署模式：云端运行（非本地电脑）
@@ -130,7 +130,13 @@
 ### 10.1 部署要求
 1. 运行位置：云服务器。
 2. 执行入口：OpenClaw 定时任务。
-3. 存储：结构化数据表 + Excel 导出目录 + 日志目录。
+3. 存储：默认轻量方案 `SQLite + Parquet + Excel 产物 + 日志目录`。
+
+### 10.4 存储策略（轻量优先）
+1. 在线结构化数据：`SQLite`（单文件部署，低运维成本）。
+2. 批次快照与分析副本：`Parquet`（按 `run_id` 分目录）。
+3. 报表交付：`Excel`（固定 Sheet 结构）。
+4. 迁移触发：当高并发写入、复杂查询、数据量持续增长时升级 `PostgreSQL`。
 
 ### 10.2 任务 DAG（建议）
 1. `discover_hierarchy`
@@ -231,6 +237,10 @@
 - `disappeared_series_count`
 - `success_rate`
 - `status`
+
+### 11.7 存储配置（默认与扩展）
+1. 默认（Phase 1）：`SQLite + Parquet`。
+2. 扩展（Phase 2+）：`PostgreSQL + Parquet`，用于更高并发与更复杂查询。
 
 ## 12. Excel 交付规范
 每次任务导出一个 Excel，包含以下 Sheet：
