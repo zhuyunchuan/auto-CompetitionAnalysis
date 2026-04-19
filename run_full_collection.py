@@ -136,11 +136,8 @@ def collect_dahua(
                             series_l1=product.series_l1,
                             series_l2=product.series_l2,
                             model=product.model,
+                            source_url=product.url
                         )
-
-                        # Add source URL to each record
-                        for record in spec_records:
-                            record.source_url = product.url
 
                         # Save spec records
                         if spec_records:
@@ -277,11 +274,8 @@ def collect_hikvision(
                             series_l1=product.series_l1,
                             series_l2=product.series_l2,
                             model=product.model,
+                            source_url=product.url
                         )
-
-                        # Add source URL to each record
-                        for record in spec_records:
-                            record.source_url = product.url
 
                         # Save spec records
                         if spec_records:
@@ -603,7 +597,7 @@ def main():
     # Step 3: Collect Hikvision Value series (limited to 10 products)
     logger.info("Step 3: Collecting Hikvision Value series (first 10 products)")
     try:
-        hikvision_adapter = HikvisionAdapter(use_playwright=True, series_l1_allowlist=["Value"])
+        hikvision_adapter = HikvisionAdapter(use_playwright=False, series_l1_allowlist=["Value"])
         hikvision_products, hikvision_specs, hikvision_series, hikvision_failures = collect_hikvision(
             hikvision_adapter, extractor, run_id, raw_html_dir, limit=10
         )

@@ -1140,7 +1140,8 @@ class SpecExtractor:
         brand: str,
         series_l1: str,
         series_l2: str,
-        model: str
+        model: str,
+        source_url: str = ""
     ) -> List[SpecRecord]:
         """
         Convert ExtractionResult dict to list of SpecRecord.
@@ -1152,6 +1153,7 @@ class SpecExtractor:
             series_l1: Series level 1
             series_l2: Series level 2
             model: Product model
+            source_url: Source URL for the spec data
 
         Returns:
             List of SpecRecord objects with successful extractions only
@@ -1171,6 +1173,8 @@ class SpecExtractor:
                     raw_value=result.raw_value,
                     normalized_value=result.normalized_value,
                     unit=self.field_registry.get_canonical_unit(field_code),
+                    source_url=source_url,
+                    confidence=result.confidence,
                     is_manual_override=False
                 ))
 
