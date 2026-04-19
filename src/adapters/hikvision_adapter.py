@@ -9,6 +9,11 @@ This adapter handles:
 
 Entry URL: https://www.hikvision.com/en/products/IP-Products/Network-Cameras/
 Target series: Value, Pro, PT, etc. (dynamically discovered with allowlist filtering)
+
+Improvements v2:
+- Uses Playwright for JS-rendered pages (Hikvision uses JS to load filtered product lists)
+- Reuses a single Playwright browser instance across calls
+- Clicks filter tabs to discover series and subseries
 """
 
 import logging
@@ -22,8 +27,107 @@ from src.adapters.base_adapter import BrandAdapter
 from src.core.types import CatalogItem
 from src.crawler.http_client import HttpClient
 
-
 logger = logging.getLogger(__name__)
+
+
+class _Browser:
+    """Lazy singleton for Playwright browser reuse."""
+
+    def __init__(self):
+        self._pw = None
+        self._browser = None
+
+    def _ensure(self):
+        if self._browser is None:
+            from playwright.sync_api import sync_playwright
+            self._pw = sync_playwright().start()
+            self._browser = self._pw.chromium.launch(headless=True)
+
+    def new_page(self):
+        self._ensure()
+        return self._browser.new_page()
+
+    def close(self):
+        if self._browser:
+            self._browser.close()
+            self._browser = None
+        if self._pw:
+            self._pw.stop()
+            self._pw = None
+
+
+_browser = _Browser()
+
+
+def _playwright_get(url: str, wait_ms: int = 3000) -> str:
+    """Fetch a JS-rendered page with Playwright (reuses browser)."""
+    page = _browser.new_page()
+    try:
+        page.goto(url, wait_until="networkidle", timeout=30000)
+        page.wait_for_timeout(wait_ms)
+        return page.content()
+    finally:
+        page.close()
+
+
+def _playwright_get_with_filters(url: str, wait_ms: int = 2000) -> dict:
+    """
+    Load a series page, discover filter tabs, click each series tab,
+    and return {series_name: html_content} for each tab.
+
+    Hikvision uses filter buttons/tabs for series navigation (Value, Pro, etc.).
+
+    Returns:
+        dict mapping series display name to page HTML after clicking that tab.
+    """
+    results = {}
+    page = _browser.new_page()
+    try:
+        page.goto(url, wait_until="networkidle", timeout=30000)
+        page.wait_for_timeout(wait_ms)
+
+        # Find filter tab elements - Hikvision uses various selectors for tabs
+        # Common patterns: button, a.tag, div.filter-item, etc.
+        tab_selectors = [
+            "button.filter-item",
+            "a.tag-item",
+            "div.series-filter button",
+            "div.filter-tab",
+            "button[role='tab']",
+            "a[role='tab']",
+        ]
+
+        tabs = []
+        for selector in tab_selectors:
+            tab_els = page.query_selector_all(selector)
+            if tab_els:
+                for el in tab_els:
+                    text = el.inner_text().strip()
+                    if text and 2 < len(text) < 50:
+                        tabs.append((text, el))
+                if tabs:
+                    break
+
+        logger.info(f"Found {len(tabs)} filter tabs: {[t[0] for t in tabs]}")
+
+        for tab_name, el in tabs:
+            try:
+                el.click()
+                page.wait_for_timeout(wait_ms)
+                tab_html = page.content()
+                results[tab_name] = tab_html
+                logger.debug(f"Captured tab: {tab_name}")
+            except Exception as e:
+                logger.warning(f"Failed to click tab '{tab_name}': {e}")
+
+        # If no tabs found, capture default page
+        if not results:
+            results["default"] = page.content()
+
+    finally:
+        page.close()
+
+    return results
 
 
 class HikvisionAdapter(BrandAdapter):
@@ -68,6 +172,7 @@ class HikvisionAdapter(BrandAdapter):
         self,
         http_client: Optional[HttpClient] = None,
         series_l1_allowlist: Optional[List[str]] = None,
+        use_playwright: bool = True,
     ):
         """
         Initialize Hikvision adapter.
@@ -75,25 +180,61 @@ class HikvisionAdapter(BrandAdapter):
         Args:
             http_client: Optional HTTP client (creates default if not provided)
             series_l1_allowlist: Optional list of allowed L1 series names (None = all allowed)
+            use_playwright: Whether to use Playwright for JS-rendered pages (default: True)
         """
         self.http_client = http_client or HttpClient(
             timeout_sec=30, retry_times=3, min_delay_ms=300, max_delay_ms=1200
         )
         self.series_l1_allowlist = series_l1_allowlist or self.DEFAULT_SERIES_ALLOWLIST
-        logger.info(f"HikvisionAdapter initialized with allowlist: {self.series_l1_allowlist}")
+        self.use_playwright = use_playwright
+        self._series_data: dict = {}  # {series_name: html}
+        logger.info(f"HikvisionAdapter initialized with allowlist: {self.series_l1_allowlist}, use_playwright={use_playwright}")
+
+    def _fetch(self, url: str) -> str:
+        """Fetch URL with Playwright or httpx based on configuration."""
+        if self.use_playwright:
+            try:
+                return _playwright_get(url)
+            except Exception as e:
+                logger.warning(f"Playwright failed for {url}: {e}, falling back to httpx")
+        return self.http_client.get(url) or ""
 
     def discover_series(self) -> List[str]:
         """
         Discover L1 series from entry page.
 
-        Strategy: Find series-level links on the page (depth-5 URLs under Network-Cameras/).
-        Also extract series from product URLs.
+        Uses Playwright to click filter tabs and capture HTML for each series.
+        Falls back to parsing links if Playwright fails or is disabled.
 
         Returns:
             List of series names (e.g., ["Pro", "Value", "Ultra"])
         """
         logger.info(f"Discovering series from {self.ENTRY_URL}")
 
+        if self.use_playwright:
+            try:
+                # Use Playwright to click filter tabs and get HTML for each series
+                tabs_html = _playwright_get_with_filters(self.ENTRY_URL)
+                series_names = []
+
+                for series_name, html in tabs_html.items():
+                    self._series_data[series_name] = html
+                    series_names.append(series_name)
+
+                if series_names:
+                    # Filter by allowlist if configured
+                    if self.series_l1_allowlist:
+                        filtered = [s for s in series_names if any(kw.lower() in s.lower() for kw in self.series_l1_allowlist)]
+                        if filtered:
+                            logger.info(f"Discovered {len(filtered)} series (filtered): {filtered}")
+                            return filtered
+
+                    logger.info(f"Discovered {len(series_names)} series: {series_names}")
+                    return series_names
+            except Exception as e:
+                logger.warning(f"Playwright series discovery failed: {e}, falling back to link parsing")
+
+        # Fallback: Use httpx and parse links
         html = self.http_client.get(self.ENTRY_URL)
         if not html:
             logger.error("Failed to fetch entry page")
@@ -151,34 +292,38 @@ class HikvisionAdapter(BrandAdapter):
         """
         logger.info(f"Discovering subseries for {series_l1}")
 
-        # Use the entry page to find products grouped by series slug
-        slug = getattr(self, '_series_slugs', {}).get(series_l1, '')
-        if not slug:
-            logger.warning(f"No slug found for {series_l1}")
-            return [series_l1]
+        # Try cached HTML from discover_series first (when using Playwright with tabs)
+        html = self._series_data.get(series_l1)
 
-        # The entry page already contains products with their series slugs
-        # Subseries are just the series slug itself for now
-        # (Hikvision doesn't have a clear L2 subseries structure on the page)
-        html = self.http_client.get(self.ENTRY_URL)
+        if not html:
+            # Fallback: fetch the entry page
+            html = self._fetch(self.ENTRY_URL)
+
         if not html:
             return [series_l1]
 
         soup = BeautifulSoup(html, "lxml")
-        
-        # Find product links matching this series slug
+
+        # Try to find subseries tabs/filters in the series HTML
         subseries_set = set()
-        for a in soup.find_all("a", href=True):
-            href = a.get("href", "")
-            # Match: /en/products/IP-Products/Network-Cameras/{slug}/{model}/
-            match = re.match(
-                r"/[^/]+/products/IP-Products/Network-Cameras/" + re.escape(slug) + r"/([^/]+)/",
-                href
-            )
-            if match:
-                sub_slug = match.group(1)
-                if sub_slug and sub_slug != slug:
-                    subseries_set.add(sub_slug)
+
+        # Look for filter items or sub-categories
+        subseries_selectors = [
+            "button.filter-item",
+            "a.tag-item",
+            "div.subcategory-item a",
+            "div.filter-subitem",
+        ]
+
+        for selector in subseries_selectors:
+            items = soup.select(selector)
+            if items:
+                for item in items:
+                    text = item.get_text(strip=True)
+                    if text and 2 < len(text) < 50:
+                        subseries_set.add(text)
+                if subseries_set:
+                    break
 
         if subseries_set:
             result = sorted(list(subseries_set))
@@ -193,7 +338,7 @@ class HikvisionAdapter(BrandAdapter):
         """
         List products in a given series/subseries combination.
 
-        Uses the entry page and filters by series slug from product URLs.
+        Uses cached HTML from discover_series (when using Playwright) or fetches fresh.
 
         Args:
             series_l1: L1 series name (e.g., "Pro")
@@ -204,11 +349,13 @@ class HikvisionAdapter(BrandAdapter):
         """
         logger.info(f"Listing products for {series_l1} / {series_l2}")
 
-        slug = getattr(self, '_series_slugs', {}).get(series_l1, '')
-        if not slug:
-            slug = self._series_name_to_slug(series_l1)
+        # Try cached HTML first (from Playwright tab clicking)
+        html = self._series_data.get(series_l1)
 
-        html = self.http_client.get(self.ENTRY_URL)
+        if not html:
+            # Fallback: fetch the entry page
+            html = self._fetch(self.ENTRY_URL)
+
         if not html:
             logger.error(f"Failed to fetch product list page")
             return []
@@ -217,13 +364,14 @@ class HikvisionAdapter(BrandAdapter):
         products = []
         seen_models = set()
 
-        # Find product links matching: /en/products/IP-Products/Network-Cameras/{slug}/{model}/
-        pattern = re.compile(
-            r"/[^/]+/products/IP-Products/Network-Cameras/" + re.escape(slug) + r"/([^/]+)/?$"
-        )
-        for a in soup.find_all("a", href=pattern):
+        # Find product links - Hikvision uses various patterns
+        # Pattern 1: /en/products/IP-Products/Network-Cameras/{series}/{model}/
+        # Pattern 2: Product cards with h3.h3-seo containing model
+        for a in soup.find_all("a", href=True):
             href = a.get("href", "")
-            match = pattern.search(href)
+
+            # Match product URLs
+            match = re.search(r"/products/IP-Products/Network-Cameras/[^/]+/([^/]+)/?$", href)
             if not match:
                 continue
 
@@ -240,21 +388,24 @@ class HikvisionAdapter(BrandAdapter):
             if not self._is_valid_model(model) and not self._is_valid_model(model_slug):
                 continue
 
-            if model in seen_models:
+            # Use the model from h3.h3-seo if available, otherwise use slug
+            final_model = model if self._is_valid_model(model) else model_slug.upper()
+
+            if final_model in seen_models:
                 continue
-            seen_models.add(model)
+            seen_models.add(final_model)
 
             product_url = urljoin(self.BASE_URL, href)
 
             # Get product name from nearby text
             name_parts = a.get_text(separator=" ", strip=True).split()
-            name = " ".join(name_parts[:10]) if name_parts else model
+            name = " ".join(name_parts[:10]) if name_parts else final_model
 
             product = CatalogItem(
                 brand="hikvision",
                 series_l1=series_l1,
                 series_l2=series_l2,
-                model=model,
+                model=final_model,
                 name=name,
                 url=product_url,
                 locale="en",
@@ -276,12 +427,18 @@ class HikvisionAdapter(BrandAdapter):
         """
         logger.debug(f"Fetching product detail: {url}")
 
-        html = self.http_client.get(url)
+        html = self._fetch(url)
         if not html:
             logger.error(f"Failed to fetch product detail: {url}")
             return ""
 
         return html
+
+    def close(self):
+        """Clean up browser resources."""
+        if self.use_playwright:
+            _browser.close()
+            logger.info("Browser resources cleaned up")
 
     def _is_series_allowed(self, series_name: str) -> bool:
         """

@@ -66,7 +66,7 @@ def export_excel_report(
     try:
         # Set default artifact directory
         if artifact_dir is None:
-            artifact_dir = "/data/artifacts"
+            artifact_dir = os.getenv('ARTIFACT_DIR', '/data/artifacts')
 
         # Create artifact directory if it doesn't exist
         Path(artifact_dir).mkdir(parents=True, exist_ok=True)
@@ -99,80 +99,56 @@ def export_excel_report(
             if not run_summary:
                 raise Exception(f"Run summary not found for run_id={run_id}")
 
-            # Initialize Excel writer
-            excel_filename = f"competitor_specs_{run_id}.xlsx"
-            excel_path = os.path.join(artifact_dir, excel_filename)
+            logger.info(f"Generating Excel file: {artifact_dir}")
 
-            logger.info(f"Generating Excel file: {excel_path}")
-
-            # Create Excel workbook
-            excel_writer = ExcelWriter(excel_path)
-
-            # Write catalog sheets
+            # Prepare data for ExcelWriter
+            catalog_data = {}
             if hikvision_catalog:
-                excel_writer.write_catalog_sheet(
-                    sheet_name="hikvision_catalog",
-                    catalog_data=hikvision_catalog
-                )
-                logger.info(f"Wrote {len(hikvision_catalog)} Hikvision catalog entries")
+                catalog_data['hikvision'] = hikvision_catalog
+                logger.info(f"Found {len(hikvision_catalog)} Hikvision catalog entries")
 
             if dahua_catalog:
-                excel_writer.write_catalog_sheet(
-                    sheet_name="dahua_catalog",
-                    catalog_data=dahua_catalog
-                )
-                logger.info(f"Wrote {len(dahua_catalog)} Dahua catalog entries")
+                catalog_data['dahua'] = dahua_catalog
+                logger.info(f"Found {len(dahua_catalog)} Dahua catalog entries")
 
-            # Write spec sheets
+            spec_data = {}
             if hikvision_specs:
-                excel_writer.write_specs_sheet(
-                    sheet_name="hikvision_specs",
-                    spec_data=hikvision_specs
-                )
-                logger.info(f"Wrote {len(hikvision_specs)} Hikvision spec records")
+                spec_data['hikvision'] = hikvision_specs
+                logger.info(f"Found {len(hikvision_specs)} Hikvision spec records")
 
             if dahua_specs:
-                excel_writer.write_specs_sheet(
-                    sheet_name="dahua_specs",
-                    spec_data=dahua_specs
-                )
-                logger.info(f"Wrote {len(dahua_specs)} Dahua spec records")
+                spec_data['dahua'] = dahua_specs
+                logger.info(f"Found {len(dahua_specs)} Dahua spec records")
 
-            # Write issues sheet
             if all_issues:
-                excel_writer.write_issues_sheet(
-                    sheet_name="data_quality_issues",
-                    issue_data=all_issues
-                )
-                logger.info(f"Wrote {len(all_issues)} quality issues")
+                logger.info(f"Found {len(all_issues)} quality issues")
 
-            # Write manual append template sheet
-            excel_writer.write_manual_template_sheet(
-                sheet_name="manual_append"
+            # Initialize Excel writer and generate report
+            excel_writer = ExcelWriter(artifact_dir)
+            excel_path = excel_writer.generate_report(
+                run_id=run_id,
+                catalog_data=catalog_data,
+                spec_data=spec_data,
+                issues=all_issues,
+                summary=run_summary
             )
-            logger.info("Wrote manual append template sheet")
-
-            # Write run summary sheet
-            run_summary_writer = RunSummaryWriter()
-            run_summary_writer.write_summary_sheet(
-                excel_writer=excel_writer,
-                sheet_name="run_summary",
-                run_summary=run_summary
-            )
-            logger.info("Wrote run summary sheet")
-
-            # Save Excel file
-            excel_writer.save()
 
             # Get file size
             file_size_mb = os.path.getsize(excel_path) / (1024 * 1024)
 
             duration = (datetime.utcnow() - start_time).total_seconds()
 
+            # Collect sheet names
+            sheet_names = list(ExcelWriter.SHEET_CATALOGS.values()) + list(ExcelWriter.SHEET_SPECS.values()) + [
+                ExcelWriter.SHEET_MANUAL_APPEND,
+                ExcelWriter.SHEET_QUALITY_ISSUES,
+                ExcelWriter.SHEET_RUN_SUMMARY,
+            ]
+
             result = {
                 'status': 'success',
-                'excel_path': excel_path,
-                'sheets': excel_writer.get_sheet_names(),
+                'excel_path': str(excel_path),
+                'sheets': sheet_names,
                 'file_size_mb': round(file_size_mb, 2),
                 'duration_seconds': duration,
             }

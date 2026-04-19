@@ -247,8 +247,9 @@ def fetch_product_detail(
             html_results = detail_collector.fetch_all(catalog_item_objects)
 
             # Save HTML snapshots to filesystem
-            snapshot_dir = f"/data/raw_html/{run_id}"
             import os
+            snapshot_dir = os.getenv('RAW_SNAPSHOT_DIR', '/data/raw_html')
+            snapshot_dir = f"{snapshot_dir}/{run_id}"
             os.makedirs(snapshot_dir, exist_ok=True)
 
             saved_count = 0

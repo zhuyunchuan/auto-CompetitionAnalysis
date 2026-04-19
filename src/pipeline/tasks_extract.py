@@ -62,7 +62,8 @@ def extract_and_normalize_specs(
     try:
         # Set default snapshot directory
         if snapshot_dir is None:
-            snapshot_dir = f"/data/raw_html/{run_id}"
+            base_dir = os.getenv('RAW_SNAPSHOT_DIR', '/data/raw_html')
+            snapshot_dir = f"{base_dir}/{run_id}"
 
         # Initialize database
         db = get_database()
@@ -260,7 +261,8 @@ def reextract_product(
 
         # Set default snapshot directory
         if snapshot_dir is None:
-            snapshot_dir = f"/data/raw_html/{run_id}"
+            base_dir = os.getenv('RAW_SNAPSHOT_DIR', '/data/raw_html')
+            snapshot_dir = f"{base_dir}/{run_id}"
 
         # Read HTML snapshot
         filename = catalog_item.product_url.replace('/', '_').replace(':', '_')
