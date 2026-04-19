@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Full Dahua WizSense 3 collection script.
+Full Dahua WizSense 2 + 3 collection script.
 
 This script:
 1. Initializes the database schema
-2. Collects all WizSense 3 products using Playwright
+2. Collects all WizSense 2 and WizSense 3 products using Playwright
 3. Extracts specifications from each product detail page
 4. Saves to database
 5. Exports Excel report to data/artifacts/
@@ -35,7 +35,7 @@ def generate_run_id() -> str:
 def main():
     """Main execution function."""
     print("=" * 80)
-    print("Dahua WizSense 3 Full Collection")
+    print("Dahua WizSense 2 + 3 Full Collection")
     print("=" * 80)
 
     # Configuration
@@ -66,36 +66,41 @@ def main():
         return
 
     # Step 3: Discover series and products
-    print("\n[3/6] Discovering WizSense 3 series and products...")
+    print("\n[3/6] Discovering WizSense 2 + 3 series and products...")
     try:
         series_list = adapter.discover_series()
         print(f"   Found series: {series_list}")
 
-        # Find WizSense 3 series
-        target_series = None
+        # Find target series
+        target_series_list = []
         for series in series_list:
-            if "WizSense 3" in series or "wizsense 3" in series.lower():
-                target_series = series
-                break
+            if "WizSense 2" in series or "wizsense 2" in series.lower():
+                target_series_list.append(series)
+            elif "WizSense 3" in series or "wizsense 3" in series.lower():
+                target_series_list.append(series)
 
-        if not target_series:
-            print("   ✗ WizSense 3 series not found!")
+        if not target_series_list:
+            print("   ✗ WizSense 2 or 3 series not found!")
             return
 
-        print(f"   Target series: {target_series}")
+        print(f"   Target series: {target_series_list}")
 
-        # Discover subseries
-        subseries_list = adapter.discover_subseries(target_series)
-        print(f"   Found {len(subseries_list)} subseries: {subseries_list}")
-
-        # Collect all products
+        # Collect all products from both series
         all_products = []
-        for subseries in subseries_list:
-            print(f"   Fetching products for subseries: {subseries}")
-            products = adapter.list_products(target_series, subseries)
-            print(f"   Found {len(products)} products")
-            all_products.extend(products)
-            time.sleep(1)  # Rate limiting
+        for target_series in target_series_list:
+            print(f"\n   Processing series: {target_series}")
+
+            # Discover subseries
+            subseries_list = adapter.discover_subseries(target_series)
+            print(f"   Found {len(subseries_list)} subseries: {subseries_list}")
+
+            # Collect products
+            for subseries in subseries_list:
+                print(f"   Fetching products for subseries: {subseries}")
+                products = adapter.list_products(target_series, subseries)
+                print(f"   Found {len(products)} products")
+                all_products.extend(products)
+                time.sleep(1)  # Rate limiting
 
         # Remove duplicates
         seen_models = set()
@@ -108,7 +113,7 @@ def main():
         print(f"\n   Total unique products: {len(unique_products)}")
 
         if len(unique_products) < 30:
-            print("   ⚠ Warning: Expected 41 products, found fewer")
+            print("   ⚠ Warning: Expected at least 30 products, found fewer")
 
     except Exception as e:
         print(f"   ✗ Failed to discover products: {e}")

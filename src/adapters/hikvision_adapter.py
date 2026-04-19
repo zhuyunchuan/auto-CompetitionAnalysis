@@ -10,15 +10,16 @@ This adapter handles:
 Entry URL: https://www.hikvision.com/en/products/IP-Products/Network-Cameras/
 Target series: Value, Pro, PT, etc. (dynamically discovered with allowlist filtering)
 
-Improvements v2:
-- Uses Playwright for JS-rendered pages (Hikvision uses JS to load filtered product lists)
-- Reuses a single Playwright browser instance across calls
-- Clicks filter tabs to discover series and subseries
+Improvements v3:
+- Uses Hikvision's JSON API for product filtering (bypasses Playwright crashes)
+- API endpoint: /content/hikvision/en/products/IP-Products/Network-Cameras/.../search_list_copy.json
+- Falls back to httpx if API fails
+- Reuses a single Playwright browser instance for detail pages (when needed)
 """
 
 import logging
 import re
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
@@ -28,6 +29,9 @@ from src.core.types import CatalogItem
 from src.crawler.http_client import HttpClient
 
 logger = logging.getLogger(__name__)
+
+# Hikvision JSON API endpoint
+HIKVISION_API_URL = "https://www.hikvision.com/content/hikvision/en/products/IP-Products/Network-Cameras/jcr:content/root/responsivegrid/search_list_copy.json"
 
 
 class _Browser:
@@ -41,7 +45,7 @@ class _Browser:
         if self._browser is None:
             from playwright.sync_api import sync_playwright
             self._pw = sync_playwright().start()
-            self._browser = self._pw.chromium.launch(headless=True)
+            self._browser = self._pw.chromium.launch(headless=True, args=['--no-sandbox', '--disable-dev-shm-usage'])
 
     def new_page(self):
         self._ensure()
@@ -188,6 +192,8 @@ class HikvisionAdapter(BrandAdapter):
         self.series_l1_allowlist = series_l1_allowlist or self.DEFAULT_SERIES_ALLOWLIST
         self.use_playwright = use_playwright
         self._series_data: dict = {}  # {series_name: html}
+        self._api_data: Optional[Dict[str, Any]] = None  # Cache API response
+        self._products_by_series: Dict[str, List[Dict]] = {}  # Cache products by series
         logger.info(f"HikvisionAdapter initialized with allowlist: {self.series_l1_allowlist}, use_playwright={use_playwright}")
 
     def _fetch(self, url: str) -> str:
@@ -199,18 +205,63 @@ class HikvisionAdapter(BrandAdapter):
                 logger.warning(f"Playwright failed for {url}: {e}, falling back to httpx")
         return self.http_client.get(url) or ""
 
+    def _fetch_api_data(self) -> Optional[Dict[str, Any]]:
+        """
+        Fetch product data from Hikvision JSON API.
+
+        Returns:
+            API response dict with 'products' and 'filters' keys, or None on failure
+        """
+        if self._api_data is not None:
+            return self._api_data
+
+        logger.info(f"Fetching product data from Hikvision API: {HIKVISION_API_URL}")
+        try:
+            # Use httpx directly since we need to access the response object
+            import httpx
+            client = httpx.Client(timeout=30, follow_redirects=True)
+            resp = client.get(HIKVISION_API_URL)
+            if resp.status_code == 200:
+                self._api_data = resp.json()
+                products_count = len(self._api_data.get('products', []))
+                logger.info(f"Successfully fetched {products_count} products from API")
+                return self._api_data
+            else:
+                logger.warning(f"API returned status {resp.status_code}")
+        except Exception as e:
+            logger.warning(f"Failed to fetch API data: {e}")
+
+        return None
+
     def discover_series(self) -> List[str]:
         """
         Discover L1 series from entry page.
 
-        Uses Playwright to click filter tabs and capture HTML for each series.
-        Falls back to parsing links if Playwright fails or is disabled.
+        Uses Hikvision JSON API to get series information.
+        Falls back to Playwright/link parsing if API fails.
 
         Returns:
             List of series names (e.g., ["Pro", "Value", "Ultra"])
         """
         logger.info(f"Discovering series from {self.ENTRY_URL}")
 
+        # Try JSON API first (most reliable)
+        api_data = self._fetch_api_data()
+        if api_data:
+            products = api_data.get('products', [])
+            series_set = set()
+
+            for product in products:
+                series = product.get('series')
+                if series and self._is_series_allowed(series):
+                    series_set.add(series)
+
+            if series_set:
+                result = sorted(list(series_set))
+                logger.info(f"Discovered {len(result)} series from API: {result}")
+                return result
+
+        # Fallback: Try Playwright to click filter tabs
         if self.use_playwright:
             try:
                 # Use Playwright to click filter tabs and get HTML for each series
@@ -234,7 +285,7 @@ class HikvisionAdapter(BrandAdapter):
             except Exception as e:
                 logger.warning(f"Playwright series discovery failed: {e}, falling back to link parsing")
 
-        # Fallback: Use httpx and parse links
+        # Final fallback: Use httpx and parse links
         html = self.http_client.get(self.ENTRY_URL)
         if not html:
             logger.error("Failed to fetch entry page")
@@ -338,7 +389,8 @@ class HikvisionAdapter(BrandAdapter):
         """
         List products in a given series/subseries combination.
 
-        Uses cached HTML from discover_series (when using Playwright) or fetches fresh.
+        Uses Hikvision JSON API for accurate series filtering.
+        Falls back to HTML parsing if API fails.
 
         Args:
             series_l1: L1 series name (e.g., "Pro")
@@ -348,6 +400,96 @@ class HikvisionAdapter(BrandAdapter):
             List of catalog items
         """
         logger.info(f"Listing products for {series_l1} / {series_l2}")
+
+        # Try API first (most reliable for filtering)
+        api_data = self._fetch_api_data()
+        if api_data:
+            products = self._list_products_from_api(api_data, series_l1, series_l2)
+            if products:
+                return products
+
+        # Fallback: Use HTML parsing
+        return self._list_products_from_html(series_l1, series_l2)
+
+    def _list_products_from_api(self, api_data: Dict[str, Any], series_l1: str, series_l2: str) -> List[CatalogItem]:
+        """
+        Extract products from API data for a given series/subseries.
+
+        Args:
+            api_data: API response data
+            series_l1: L1 series name
+            series_l2: L2 subseries name
+
+        Returns:
+            List of catalog items
+        """
+        all_products = api_data.get('products', [])
+
+        # Filter by series (exact match or partial match)
+        filtered_products = []
+        for product in all_products:
+            product_series = product.get('series', '')
+            product_subseries = product.get('subseries', '')
+
+            # Match series (case-insensitive partial match)
+            if series_l1.lower() in product_series.lower():
+                # If series_l2 is provided, try to match it
+                if series_l2 and series_l2 != series_l1:
+                    if series_l2.lower() in product_subseries.lower():
+                        filtered_products.append(product)
+                else:
+                    filtered_products.append(product)
+
+        # Convert to CatalogItem
+        result = []
+        seen_models = set()
+
+        for product in filtered_products:
+            model = product.get('productModel', '').strip()
+            if not model or model in seen_models:
+                continue
+
+            seen_models.add(model)
+
+            # Build URL from detailPath
+            detail_path = product.get('detailPath', '')
+            if detail_path:
+                product_url = urljoin(self.BASE_URL, detail_path)
+            else:
+                # Fallback: build URL from series and model
+                series_slug = self._series_name_to_slug(series_l1)
+                model_slug = model.lower().replace('/', '-').replace(' ', '-')
+                product_url = f"{self.BASE_URL}/en/products/IP-Products/Network-Cameras/{series_slug}/{model_slug}/"
+
+            # Get product title
+            title = product.get('title', model)
+
+            catalog_item = CatalogItem(
+                brand="hikvision",
+                series_l1=series_l1,
+                series_l2=series_l2,
+                model=model,
+                name=title,
+                url=product_url,
+                locale="en",
+            )
+            result.append(catalog_item)
+
+        logger.info(f"Found {len(result)} products for {series_l1} / {series_l2} from API")
+        return result
+
+    def _list_products_from_html(self, series_l1: str, series_l2: str) -> List[CatalogItem]:
+        """
+        Fallback: Extract products from HTML when API fails.
+
+        Args:
+            series_l1: L1 series name
+            series_l2: L2 subseries name
+
+        Returns:
+            List of catalog items
+        """
+        logger.warning(f"API unavailable, falling back to HTML parsing for {series_l1} / {series_l2}")
 
         # Try cached HTML first (from Playwright tab clicking)
         html = self._series_data.get(series_l1)
@@ -412,7 +554,7 @@ class HikvisionAdapter(BrandAdapter):
             )
             products.append(product)
 
-        logger.info(f"Found {len(products)} products for {series_l1} / {series_l2}")
+        logger.info(f"Found {len(products)} products for {series_l1} / {series_l2} from HTML")
         return products
 
     def fetch_product_detail(self, url: str) -> str:

@@ -35,7 +35,7 @@ class _Browser:
         if self._browser is None:
             from playwright.sync_api import sync_playwright
             self._pw = sync_playwright().start()
-            self._browser = self._pw.chromium.launch(headless=True)
+            self._browser = self._pw.chromium.launch(headless=True, args=['--no-sandbox', '--disable-dev-shm-usage'])
 
     def new_page(self):
         self._ensure()
