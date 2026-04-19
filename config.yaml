@@ -1,0 +1,163 @@
+# Competitor Product Scraping System Configuration
+# This file controls all aspects of the scraping pipeline
+
+schedule:
+  # Scheduling mode: biweekly or monthly
+  mode: biweekly
+  # Day of week for biweekly (0=Monday, 6=Sunday)
+  biweekly_day: 5  # Friday
+  # Day of month for monthly (1-31)
+  monthly_day: 1
+  # Hour to run (0-23)
+  hour: 2
+  # Timezone
+  timezone: UTC
+
+# Brand-specific configurations
+brands:
+  hikvision:
+    enabled: true
+    entry_url: "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/"
+    locale: "en"
+    # Series L1 allowlist (set to null or empty to accept all)
+    series_l1_allowlist:
+      - "Value"
+      - "Pro"
+      - "PT"
+      - "Ultra"
+      - "Special"
+
+  dahua:
+    enabled: true
+    entry_url: "https://www.dahuasecurity.com/products/network-products/network-cameras"
+    locale: "en"
+    # Series keywords allowlist (set to null or empty to accept all)
+    series_keywords_allowlist:
+      - "WizSense 2"
+      - "WizSense 3"
+      - "WizSense"
+
+# Crawler configuration
+crawler:
+  # HTTP settings
+  timeout_sec: 30
+  max_redirects: 5
+  verify_ssl: true
+
+  # Retry settings
+  max_retries: 3
+  retry_delays: [2.0, 5.0, 10.0]  # seconds
+
+  # Rate limiting
+  min_delay_ms: 300  # 300ms minimum between requests
+  max_delay_ms: 1200  # 1200ms maximum between requests
+  concurrent_requests: 5
+
+  # Cache settings
+  cache_enabled: true
+  cache_ttl_hours: 24
+  cache_dir: "data/cache"
+
+  # HTML snapshot settings
+  save_snapshots: true
+  snapshot_dir: "data/raw_html"
+
+  # Playwright settings (for dynamic pages)
+  use_playwright_fallback: true
+  playwright_timeout_ms: 30000
+  playwright_headless: true
+
+  # User agent rotation
+  user_agents:
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15"
+
+# Storage configuration
+storage:
+  # SQLite database (default for Phase 1)
+  sqlite_path: "data/db/competitor.db"
+  # Connection pool settings
+  pool_size: 5
+  max_overflow: 10
+
+  # Parquet batch storage
+  parquet_enabled: true
+  parquet_dir: "data/parquet"
+  partition_by_year_month: true
+
+  # Optional: DuckDB for analytics (uncomment to enable)
+  # duckdb_path: "data/db/analytics.duckdb"
+
+  # Artifact directories
+  artifact_dir: "data/artifacts"
+  raw_snapshot_dir: "data/raw_html"
+
+# Extraction configuration
+extraction:
+  # Confidence threshold for automatic acceptance
+  confidence_threshold: 0.6
+  # Label-based extraction (highest confidence)
+  use_label_matching: true
+  # Position-based inference (medium confidence)
+  use_position_inference: true
+  # Regex fallback (lower confidence)
+  use_regex_fallback: true
+
+# Quality detection configuration
+quality:
+  # Minimum success rate for alerts
+  min_success_rate: 0.90
+  # Enable specific issue types
+  detect_missing_fields: true
+  detect_parse_failures: true
+  detect_unit_abnormal: true
+  detect_duplicates: true
+  detect_empty_subseries: true
+  detect_hierarchy_changes: true
+
+# Manual input configuration
+manual:
+  # Manual input directory
+  input_dir: "data/manual_inputs"
+  # Require reason for all manual changes
+  require_reason: true
+  # Require operator name
+  require_operator: true
+
+# Export configuration
+export:
+  # Excel export settings
+  freeze_header_row: true
+  auto_width_columns: true
+  enable_conditional_formatting: true
+  # Sheet order
+  sheets:
+    - "hikvision_catalog"
+    - "hikvision_specs"
+    - "dahua_catalog"
+    - "dahua_specs"
+    - "manual_append"
+    - "data_quality_issues"
+    - "run_summary"
+
+# Logging configuration
+logging:
+  level: INFO  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: json  # json or text
+  # Log file (optional, set to null to disable file logging)
+  log_file: "data/logs/competitor_scraping.log"
+  # Log rotation
+  rotation:
+    enabled: true
+    max_size_mb: 100
+    backup_count: 10
+
+# Run ID format
+# Pattern: YYYYMMDD_<schedule_type>_<sequence>
+# Example: 20260418_biweekly_01
+run_id:
+  date_format: "%Y%m%d"
+  sequence_digits: 2
+  sequence_start: 1

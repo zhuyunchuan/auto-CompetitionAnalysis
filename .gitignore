@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Project specific
+data/
+*.db
+*.db-journal
+*.log
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# Sensitive information
+.env
+config.prod.yaml
+*.secret
+
+# OpenClaw
+.openclaw/
+dag_logs/
+
+# Parquet and artifacts
+data/parquet/
+data/artifacts/
+data/raw_html/
+data/cache/
+data/logs/
+data/manual_inputs/
+
+# Backup files
+*.bak
+*.backup
+*.old

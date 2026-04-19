@@ -1,0 +1,192 @@
+{
+  "timestamp": "2026-04-19T01:59:19.229175",
+  "note": "This test used mock HTML data due to Playwright unavailability",
+  "products": [
+    {
+      "info": {
+        "name": "WizSense 2 - WizColor (Mock)",
+        "model": "IPC-HFW3541E-SP-ASED"
+      },
+      "extractions": {
+        "supplement_light_type": {
+          "raw_value": "IR",
+          "normalized_value": "IR",
+          "confidence": 1.0,
+          "method": "page_inference",
+          "issues": []
+        },
+        "supplement_light_range": {
+          "raw_value": "50 m",
+          "normalized_value": "50m",
+          "confidence": 1.0,
+          "method": "label_match_table",
+          "issues": []
+        },
+        "max_resolution": {
+          "raw_value": "2560×1440",
+          "normalized_value": "2560x1440",
+          "confidence": 1.0,
+          "method": "label_match_table",
+          "issues": []
+        },
+        "approval_protection": {
+          "raw_value": "IP67",
+          "normalized_value": "IP67",
+          "confidence": 1.0,
+          "method": "label_match_table",
+          "issues": []
+        },
+        "main_stream_max_fps_resolution": {
+          "raw_value": "2560×1440@30fps",
+          "normalized_value": "30fps (2560x1440)",
+          "confidence": 1.0,
+          "method": "label_match_table",
+          "issues": []
+        },
+        "deep_learning_function_categories": {
+          "raw_value": "[\"SMD\", \"Quick Target\"]",
+          "normalized_value": "[\"SMD\", \"Quick Target\"]",
+          "confidence": 0.9,
+          "method": "smart_event_table",
+          "issues": []
+        },
+        "aperture": {
+          "raw_value": "F1.4",
+          "normalized_value": "f/1.4",
+          "confidence": 1.0,
+          "method": "label_match_table",
+          "issues": []
+        },
+        "approval_anti_corrosion_protection": {
+          "raw_value": "IP67",
+          "normalized_value": "IP67",
+          "confidence": 1.0,
+          "method": "dahua_protection_table",
+          "issues": []
+        },
+        "lens_type": {
+          "raw_value": "Fixed focal",
+          "normalized_value": "Fixed focal",
+          "confidence": 1.0,
+          "method": "label_match_table",
+          "issues": []
+        },
+        "interface_items": {
+          "raw_value": "[\"1 Network Port (RJ45)\", \"1 Audio Input\", \"1 Audio Output\", \"1 Alarm Input\", \"1 Alarm Output\"]",
+          "normalized_value": "[\"1 Network Port (RJ45)\", \"1 Audio Input\", \"1 Audio Output\", \"1 Alarm Input\", \"1 Alarm Output\"]",
+          "confidence": 1.0,
+          "method": "label_match_table",
+          "issues": []
+        },
+        "stream_count": {
+          "raw_value": "3",
+          "normalized_value": "3",
+          "confidence": 1.0,
+          "method": "page_inference",
+          "issues": []
+        },
+        "image_sensor": {
+          "raw_value": "1/2.8\" CMOS",
+          "normalized_value": "1/2.8\" CMOS",
+          "confidence": 1.0,
+          "method": "label_match_table",
+          "issues": []
+        }
+      },
+      "warnings": []
+    },
+    {
+      "info": {
+        "name": "WizSense 3 - TiOC PRO (Mock)",
+        "model": "IPC-HFW3541T1-ASP-SED"
+      },
+      "extractions": {
+        "supplement_light_type": {
+          "raw_value": "IR",
+          "normalized_value": "IR",
+          "confidence": 1.0,
+          "method": "page_inference",
+          "issues": []
+        },
+        "supplement_light_range": {
+          "raw_value": "30 m",
+          "normalized_value": "30m",
+          "confidence": 1.0,
+          "method": "label_match_table",
+          "issues": []
+        },
+        "max_resolution": {
+          "raw_value": "3840×2160",
+          "normalized_value": "3840x2160",
+          "confidence": 1.0,
+          "method": "label_match_table",
+          "issues": []
+        },
+        "approval_protection": {
+          "raw_value": "IP67",
+          "normalized_value": "IP67",
+          "confidence": 1.0,
+          "method": "label_match_table",
+          "issues": []
+        },
+        "main_stream_max_fps_resolution": {
+          "raw_value": "3840×2160@30fps",
+          "normalized_value": "30fps (3840x2160)",
+          "confidence": 1.0,
+          "method": "label_match_table",
+          "issues": []
+        },
+        "deep_learning_function_categories": {
+          "raw_value": "[\"SMD Plus\", \"AcuPick\", \"AI SSA\"]",
+          "normalized_value": "[\"SMD Plus\", \"AcuPick\", \"AI SSA\"]",
+          "confidence": 0.9,
+          "method": "smart_event_table",
+          "issues": []
+        },
+        "aperture": {
+          "raw_value": "F1.6",
+          "normalized_value": "f/1.6",
+          "confidence": 1.0,
+          "method": "label_match_table",
+          "issues": []
+        },
+        "approval_anti_corrosion_protection": {
+          "raw_value": "IP67",
+          "normalized_value": "IP67",
+          "confidence": 1.0,
+          "method": "dahua_protection_table",
+          "issues": []
+        },
+        "lens_type": {
+          "raw_value": "Fixed focal",
+          "normalized_value": "Fixed focal",
+          "confidence": 1.0,
+          "method": "label_match_table",
+          "issues": []
+        },
+        "interface_items": {
+          "raw_value": "[\"1 Network Port (RJ45)\", \"1 Audio Input\", \"1 Audio Output\", \"2 Alarm Input\", \"2 Alarm Output\"]",
+          "normalized_value": "[\"1 Network Port (RJ45)\", \"1 Audio Input\", \"1 Audio Output\", \"2 Alarm Input\", \"2 Alarm Output\"]",
+          "confidence": 1.0,
+          "method": "label_match_table",
+          "issues": []
+        },
+        "stream_count": {
+          "raw_value": "3",
+          "normalized_value": "3",
+          "confidence": 1.0,
+          "method": "page_inference",
+          "issues": []
+        },
+        "image_sensor": {
+          "raw_value": "1/1.8\" CMOS",
+          "normalized_value": "1/1.8\" CMOS",
+          "confidence": 1.0,
+          "method": "label_match_table",
+          "issues": []
+        }
+      },
+      "warnings": []
+    }
+  ]
+}

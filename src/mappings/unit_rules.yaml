@@ -1,0 +1,77 @@
+# Unit Normalization Rules
+# Defines canonical units and conversion factors
+
+# Distance units
+distance:
+  canonical_unit: "m"
+  conversions:
+    ft: 0.3048  # 1 foot = 0.3048 meters
+    feet: 0.3048
+    "'": 0.3048
+    inch: 0.0254  # 1 inch = 0.0254 meters
+    inches: 0.0254
+    '"': 0.0254
+    cm: 0.01  # 1 cm = 0.01 meters
+    mm: 0.001  # 1 mm = 0.001 meters
+    m: 1.0  # Already in meters
+    meter: 1.0
+    meters: 1.0
+
+# Resolution units
+resolution:
+  canonical_unit: "px"
+  format: "WIDTHxHEIGHT"  # e.g., "4608x2592"
+  megapixels:
+    - "4MP": "2688x1520"
+    - "5MP": "2592x1944"
+    - "8MP": "3840x2160"
+    - "12MP": "4000x3000"
+    - "24MP": "6048x4032"
+
+# FPS units
+fps:
+  canonical_unit: "fps"
+  format: "FPS_VALUEfps (WIDTHxHEIGHT)"  # e.g., "30fps (1920x1080)"
+  conversions:
+    fps: 1.0
+    "frame/s": 1.0
+    "frames per second": 1.0
+
+# Aperture units
+aperture:
+  canonical_unit: "f"
+  format: "f/NUMBER"  # e.g., "f/1.8"
+  conversions:
+    f: 1.0  # Already in f-number format
+
+# Stream count
+stream_count:
+  canonical_unit: "count"
+  indicators:
+    - "Third Stream"  # If present, count = 3
+    - "Extra Stream"  # If present, count = 3
+    - "Dual Stream"  # If present, count = 2
+  default_count: 2  # Default to 2 streams (main + sub)
+
+# Grade/protection ratings
+grade:
+  canonical_unit: "grade"
+  # IP ratings (Ingress Protection)
+  ip_mappings:
+    - "IP67"
+    - "IP66"
+    - "IP65"
+    - "IP54"
+    - "IP52"
+  # IK ratings (Impact)
+  ik_mappings:
+    - "IK10"
+    - "IK08"
+    - "IK07"
+
+# List field handling
+list_fields:
+  delimiter: ","
+  strip_whitespace: true
+  remove_duplicates: true
+  sort: false  # Keep original order

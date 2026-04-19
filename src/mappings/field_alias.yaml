@@ -1,0 +1,125 @@
+# Field Aliases Mapping
+# Maps multi-language field names to canonical field codes
+# Used by extractor to find fields regardless of locale
+
+image_sensor:
+  english:
+    - "Image Sensor"
+    - "Image Sensor Type"
+    - "Sensor"
+    - "Sensor Type"
+  chinese:
+    - "图像传感器"
+    -传感器"
+    - "传感器类型"
+
+max_resolution:
+  english:
+    - "Max. Resolution"
+    - "Maximum Resolution"
+    - "Max Resolution"
+    - "Resolution"
+  chinese:
+    - "最大分辨率"
+    - "分辨率"
+
+lens_type:
+  english:
+    - "Lens Type"
+    - "Lens"
+  chinese:
+    - "镜头类型"
+    - "镜头"
+
+aperture:
+  english:
+    - "Aperture"
+    - "F-Number"
+    - "F Number"
+  chinese:
+    - "光圈"
+    - "F值"
+
+supplement_light_type:
+  english:
+    - "Supplement Light Type"
+    - "Supplementary Light"
+    - "IR LED"
+    - "White Light"
+  chinese:
+    - "补光灯类型"
+    - "补光"
+    - "红外灯"
+    - "白光灯"
+
+supplement_light_range:
+  english:
+    - "Supplement Light Range"
+    - "IR Range"
+    - "White Light Range"
+    - "Extraction Distance"
+  chinese:
+    - "补光距离"
+    - "红外距离"
+    - "白光距离"
+
+main_stream_max_fps_resolution:
+  english:
+    - "Main Stream"
+    - "Main Stream Max FPS@Resolution"
+    - "Main Stream Max FPS"
+    - "Primary Stream"
+  chinese:
+    - "主码流"
+    - "主码流最大帧率@分辨率"
+
+stream_count:
+  english:
+    - "Stream Count"
+    - "Video Stream Count"
+    - "Third Stream"  # If present, count = 3
+  chinese:
+    - "码流数量"
+    - "视频流数量"
+    - "第三码流"
+
+interface_items:
+  english:
+    - "Interface"
+    - "Interfaces"
+    - "I/O Interface"
+    - "Ports"
+  chinese:
+    - "接口"
+    - "I/O接口"
+    - "端口"
+
+deep_learning_function_categories:
+  english:
+    - "Deep Learning Function"
+    - "Deep Learning Functions"
+    - "AI Functions"
+    - "Smart Features"
+  chinese:
+    - "深度学习功能"
+    - "AI功能"
+    - "智能功能"
+
+approval_protection:
+  english:
+    - "Protection"
+    - "IP Rating"
+    - "Ingress Protection"
+  chinese:
+    - "防护等级"
+    - "IP等级"
+
+approval_anti_corrosion_protection:
+  english:
+    - "Anti-Corrosion Protection"
+    - "Anti-Corrosion Grade"
+    - "IK Rating"  # Sometimes IK is used
+  chinese:
+    - "防腐等级"
+    - "防腐蚀"
+    - "IK等级"

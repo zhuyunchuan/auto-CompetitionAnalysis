@@ -1,0 +1,247 @@
+{
+  "timestamp": "2026-04-19T01:57:25.799170",
+  "products": [
+    {
+      "info": {
+        "name": "WizSense 2 - WizColor",
+        "series_l1": "WizSense 2 Series",
+        "series_l2": "WizColor",
+        "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ipc-hfw3541e-sp-ased.html"
+      },
+      "extractions": {
+        "aperture": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "lens_type": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "interface_items": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "stream_count": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "image_sensor": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "deep_learning_function_categories": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "approval_protection": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "approval_anti_corrosion_protection": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "max_resolution": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "supplement_light_type": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "main_stream_max_fps_resolution": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "supplement_light_range": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        }
+      },
+      "warnings": [
+        "No specification containers found on page https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ipc-hfw3541e-sp-ased.html"
+      ]
+    },
+    {
+      "info": {
+        "name": "WizSense 3 - TiOC PRO",
+        "series_l1": "WizSense 3 Series",
+        "series_l2": "TiOC PRO-WizColor",
+        "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/ipc-hfw3541t1-asp-sed.html"
+      },
+      "extractions": {
+        "aperture": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "lens_type": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "interface_items": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "stream_count": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "image_sensor": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "deep_learning_function_categories": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "approval_protection": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "approval_anti_corrosion_protection": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "max_resolution": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "supplement_light_type": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "main_stream_max_fps_resolution": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        },
+        "supplement_light_range": {
+          "raw_value": null,
+          "normalized_value": null,
+          "confidence": 0.0,
+          "method": "none",
+          "issues": [
+            "No specification containers found"
+          ]
+        }
+      },
+      "warnings": [
+        "No specification containers found on page https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/ipc-hfw3541t1-asp-sed.html"
+      ]
+    }
+  ]
+}

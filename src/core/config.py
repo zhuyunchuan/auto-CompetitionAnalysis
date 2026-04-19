@@ -58,19 +58,24 @@ class CrawlerConfig:
         """Create configuration from environment variables."""
         config = cls()
 
-        if timeout := os.getenv('CRAWLER_TIMEOUT'):
+        timeout = os.getenv('CRAWLER_TIMEOUT')
+        if timeout:
             config.timeout = float(timeout)
 
-        if max_retries := os.getenv('CRAWLER_MAX_RETRIES'):
+        max_retries = os.getenv('CRAWLER_MAX_RETRIES')
+        if max_retries:
             config.max_retries = int(max_retries)
 
-        if concurrent := os.getenv('CRAWLER_CONCURRENT_REQUESTS'):
+        concurrent = os.getenv('CRAWLER_CONCURRENT_REQUESTS')
+        if concurrent:
             config.concurrent_requests = int(concurrent)
 
-        if cache_dir := os.getenv('CRAWLER_CACHE_DIR'):
+        cache_dir = os.getenv('CRAWLER_CACHE_DIR')
+        if cache_dir:
             config.cache_dir = cache_dir
 
-        if snapshot_dir := os.getenv('CRAWLER_SNAPSHOT_DIR'):
+        snapshot_dir = os.getenv('CRAWLER_SNAPSHOT_DIR')
+        if snapshot_dir:
             config.snapshot_dir = snapshot_dir
 
         return config
