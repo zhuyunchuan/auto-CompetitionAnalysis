@@ -60,6 +60,7 @@ class ProductCatalog(Base):
     product_model = Column(String(200), nullable=False, index=True)
     product_name = Column(String(500), nullable=False)
     product_url = Column(String(1000), nullable=False)
+    image_url = Column(String(1000), nullable=True)
     locale = Column(String(20), nullable=False, default='en-US')
     first_seen_at = Column(DateTime, nullable=False, default=datetime.utcnow)
     last_seen_at = Column(DateTime, nullable=False, default=datetime.utcnow, index=True)

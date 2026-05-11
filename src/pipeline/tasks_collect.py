@@ -223,7 +223,8 @@ def fetch_product_detail(
                     model=item.product_model,
                     name=item.product_name,
                     url=item.product_url,
-                    locale=item.locale
+                    locale=item.locale,
+                    image_url=item.image_url,
                 )
                 for item in catalog_items
             ]
@@ -362,7 +363,8 @@ def retry_failed_fetches(
                 model=item.product_model,
                 name=item.product_name,
                 url=item.product_url,
-                locale=item.locale
+                locale=item.locale,
+                image_url=item.image_url,
             )
             for item in catalog_items
         ]
