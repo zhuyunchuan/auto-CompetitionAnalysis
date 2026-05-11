@@ -102,14 +102,13 @@ class CatalogCollector:
         try:
             items = adapter.list_products(series_l1, series_l2)
 
-            # Validate that all items have correct hierarchy
+            normalized_items: List[CatalogItem] = []
             for item in items:
                 if item.brand != node.brand:
                     logger.warning(
                         f"Item brand mismatch: expected {node.brand}, "
                         f"got {item.brand}. Overwriting."
                     )
-                    # Create new item with correct brand (items are frozen)
                     item = CatalogItem(
                         brand=node.brand,
                         series_l1=item.series_l1,
@@ -118,6 +117,7 @@ class CatalogCollector:
                         name=item.name,
                         url=item.url,
                         locale=item.locale,
+                        image_url=item.image_url,
                     )
 
                 if item.series_l1 != series_l1:
@@ -133,6 +133,7 @@ class CatalogCollector:
                         name=item.name,
                         url=item.url,
                         locale=item.locale,
+                        image_url=item.image_url,
                     )
 
                 if item.series_l2 != series_l2:
@@ -148,9 +149,12 @@ class CatalogCollector:
                         name=item.name,
                         url=item.url,
                         locale=item.locale,
+                        image_url=item.image_url,
                     )
 
-            return items
+                normalized_items.append(item)
+
+            return normalized_items
 
         except Exception as e:
             logger.error(
