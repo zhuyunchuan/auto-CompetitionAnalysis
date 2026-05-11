@@ -45,31 +45,120 @@ async function gotoWithChallengeRetries(target) {
   }
 }
 
-async function scrollToLoadAll(maxRounds = 40) {
-  let lastCount = 0;
+async function waitForResultsIdle(timeoutMs = 60000) {
+  await page.waitForFunction(
+    () => {
+      const el = document.querySelector(".product-loading");
+      if (!el) return true;
+      const style = window.getComputedStyle(el);
+      if (style.display === "none" || style.visibility === "hidden" || style.opacity === "0") return true;
+      const rect = el.getBoundingClientRect();
+      if (rect.width === 0 || rect.height === 0) return true;
+      return false;
+    },
+    { timeout: timeoutMs },
+  );
+}
+
+async function getTotalMatchesFromDom() {
+  return await page.evaluate(() => {
+    const el = document.querySelector(".sum-number-of-products");
+    const text = (el?.textContent || "").replace(/[,\s]+/g, "").trim();
+    if (!text) return null;
+    const n = Number(text);
+    return Number.isFinite(n) ? n : null;
+  });
+}
+
+async function getLoadedProductCountFromDom() {
+  return await page.evaluate(() => {
+    const norm = (u) => (u || "").split("#")[0].split("?")[0];
+    const primary = Array.from(document.querySelectorAll("a.btn-details-link[href]"));
+    const anchors = primary.length > 0 ? primary : Array.from(document.querySelectorAll("a[href]"));
+    const set = new Set();
+    for (const a of anchors) {
+      const href = norm(a.href || "");
+      if (!href.toLowerCase().includes("/products/")) continue;
+      set.add(href);
+    }
+    return set.size;
+  });
+}
+
+async function trySetPerPage(maxPerPage = "36") {
+  try {
+    await page.selectOption("select.number-select", maxPerPage);
+    await waitForResultsIdle(60000);
+    await page.waitForTimeout(800);
+  } catch {}
+}
+
+async function clickViewMore() {
+  return await page.evaluate(() => {
+    const el = document.querySelector(".product-view-more-btn");
+    if (!el) return false;
+    const style = window.getComputedStyle(el);
+    if (style.display === "none" || style.visibility === "hidden" || style.opacity === "0") return false;
+    if (typeof el.click === "function") {
+      el.click();
+      return true;
+    }
+    return false;
+  });
+}
+
+async function clickNextPageIfAny() {
+  return await page.evaluate(() => {
+    const normalize = (t) => (t || "").replace(/\s+/g, " ").trim().toLowerCase();
+    const root = document.querySelector("#layout-pagination-wrapper");
+    if (!root) return false;
+    const candidates = Array.from(root.querySelectorAll("a, button")).filter((el) => {
+      const t = normalize(el.textContent);
+      const aria = normalize(el.getAttribute("aria-label"));
+      return t === "next" || aria === "next";
+    });
+    const el = candidates[0];
+    if (el && typeof el.click === "function") {
+      el.click();
+      return true;
+    }
+    return false;
+  });
+}
+
+async function forceLoadAllProducts(maxRounds = 240) {
+  await waitForResultsIdle(90000);
+  await trySetPerPage("36");
+  await waitForResultsIdle(90000);
+  const total = (await getTotalMatchesFromDom()) ?? (await extractProductCountHint());
+
   let stableRounds = 0;
   for (let i = 0; i < maxRounds; i++) {
-    const count = await page.evaluate(() => document.querySelectorAll("a[href]").length);
-    if (count === lastCount) stableRounds += 1;
-    else stableRounds = 0;
-    lastCount = count;
-    if (stableRounds >= 5) break;
+    const loaded = await getLoadedProductCountFromDom();
+    if (total && loaded >= total) break;
 
-    const clicked = await page.evaluate(() => {
-      const candidates = Array.from(document.querySelectorAll("button, a")).filter((el) => {
-        const t = (el.textContent || "").trim().toLowerCase();
-        return t === "view more" || t === "load more" || t === "more" || t === "show more";
-      });
-      const el = candidates[0];
-      if (el && typeof el.click === "function") {
-        el.click();
-        return true;
-      }
-      return false;
-    });
-    if (!clicked) await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-    await page.waitForTimeout(2000);
+    let progressed = false;
+
+    if (await clickViewMore()) {
+      progressed = true;
+    } else if (await clickNextPageIfAny()) {
+      progressed = true;
+    } else {
+      await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+      progressed = true;
+    }
+
+    if (!progressed) break;
+
+    await waitForResultsIdle(90000);
+    await page.waitForTimeout(1200);
+
+    const loaded2 = await getLoadedProductCountFromDom();
+    if (loaded2 <= loaded) stableRounds += 1;
+    else stableRounds = 0;
+    if (stableRounds >= 6) break;
   }
+  return total;
 }
 
 function normalizeUrl(u) {
@@ -78,20 +167,22 @@ function normalizeUrl(u) {
 
 function toModelFromUrl(u) {
   const url = normalizeUrl(u).toLowerCase();
-  const m = url.match(/\/((ds|ipc)-[^/?#]+)\/?$/i);
-  if (!m) return null;
-  return m[1].toUpperCase();
+  const m = url.match(/\/((ds|ids|ipc)-[^/?#]+)\/?$/i);
+  if (m) return m[1].toUpperCase();
+  const last = url.match(/\/([^/?#]+)\/?$/i);
+  if (!last) return null;
+  return decodeURIComponent(last[1]).toUpperCase();
 }
 
 async function extractVisibleProducts() {
   const items = await page.evaluate(() => {
     const norm = (u) => (u || "").split("#")[0].split("?")[0];
-    const anchors = Array.from(document.querySelectorAll("a[href]"));
+    const primary = Array.from(document.querySelectorAll("a.btn-details-link[href]"));
+    const anchors = primary.length > 0 ? primary : Array.from(document.querySelectorAll("a[href]"));
     const byUrl = new Map();
     for (const a of anchors) {
       const href = norm(a.href || "");
       if (!href.toLowerCase().includes("/products/")) continue;
-      if (!href.toLowerCase().match(/\/(ds|ipc)-[^/?#]+\/?$/)) continue;
       if (!byUrl.has(href)) {
         const text = (a.textContent || "").replace(/\s+/g, " ").trim();
         byUrl.set(href, { url: href, text });
@@ -169,47 +260,63 @@ const structure = {
   series: {},
   notes: [
     "本结构为首次组织尝试：Pro 通过页面 Subseries 过滤器枚举；Value 暂按单一子系列；HiLook 按 Value Camera 页面枚举。",
-    "每个 subseries 目前只抓取了页面可见范围内的型号（用于结构核对），并未强制翻完全部分页。",
+    "型号列表通过 View More/分页强制加载，尽量拉满页面可提供的全部型号。",
   ],
 };
 
 structure.series.Pro = {};
 await gotoWithChallengeRetries(urls.pro);
-await scrollToLoadAll(30);
+await forceLoadAllProducts(60);
 const proSubseries = await extractProSubseriesOptions();
 
 for (const sub of proSubseries) {
   await applySubseriesFilter(sub);
-  await scrollToLoadAll(20);
-  const countHint = await extractProductCountHint();
+  const totalHint = await forceLoadAllProducts(240);
   const products = await extractVisibleProducts();
+  const countHint = (() => {
+    const hint = totalHint ?? null;
+    if (hint && hint > 0) return hint;
+    return products.length;
+  })();
   structure.series.Pro[sub] = {
     series_l1: "Pro",
     subseries: sub,
     count_hint: countHint,
+    models_count: products.length,
+    models: products,
     sample_models: products.slice(0, 20),
   };
 }
 
 structure.series.Value = {};
 await gotoWithChallengeRetries(urls.value);
-await scrollToLoadAll(30);
-structure.series.Value["Value Series"] = {
-  series_l1: "Value",
-  subseries: "Value Series",
-  count_hint: await extractProductCountHint(),
-  sample_models: (await extractVisibleProducts()).slice(0, 30),
-};
+{
+  const totalHint = await forceLoadAllProducts(240);
+  const products = await extractVisibleProducts();
+  structure.series.Value["Value Series"] = {
+    series_l1: "Value",
+    subseries: "Value Series",
+    count_hint: totalHint && totalHint > 0 ? totalHint : products.length,
+    models_count: products.length,
+    models: products,
+    sample_models: products.slice(0, 30),
+  };
+}
 
 structure.series.HiLook = {};
 await gotoWithChallengeRetries(urls.hilook);
-await scrollToLoadAll(30);
-structure.series.HiLook["Value Camera"] = {
-  series_l1: "HiLook",
-  subseries: "Value Camera",
-  count_hint: await extractProductCountHint(),
-  sample_models: (await extractVisibleProducts()).slice(0, 30),
-};
+{
+  const totalHint = await forceLoadAllProducts(240);
+  const products = await extractVisibleProducts();
+  structure.series.HiLook["Value Camera"] = {
+    series_l1: "HiLook",
+    subseries: "Value Camera",
+    count_hint: totalHint && totalHint > 0 ? totalHint : products.length,
+    models_count: products.length,
+    models: products,
+    sample_models: products.slice(0, 30),
+  };
+}
 
 await writeFile(`${outDir}/structure_filtered.json`, JSON.stringify(structure, null, 2), "utf-8");
 console.log(`OUT_DIR=${outDir}`);
