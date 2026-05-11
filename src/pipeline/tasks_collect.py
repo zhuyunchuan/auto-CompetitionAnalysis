@@ -18,6 +18,8 @@ import logging
 from datetime import datetime
 from typing import Dict, Any, List, Optional
 
+from bs4 import BeautifulSoup
+
 from src.storage.repo_hierarchy import HierarchyRepository
 from src.storage.repo_catalog import CatalogRepository
 from src.storage.repo_run_summary import RunSummaryRepository
@@ -246,6 +248,57 @@ def fetch_product_detail(
             )
 
             html_results = detail_collector.fetch_all(catalog_item_objects)
+
+            def extract_image_url(html: str, page_url: str) -> Optional[str]:
+                if not html:
+                    return None
+                soup = BeautifulSoup(html, "lxml")
+                for attrs in (
+                    {"property": "og:image"},
+                    {"name": "twitter:image"},
+                    {"name": "twitter:image:src"},
+                ):
+                    meta = soup.find("meta", attrs=attrs)
+                    if meta and meta.get("content"):
+                        value = str(meta.get("content")).strip()
+                        if value:
+                            return value
+
+                img = soup.find("img", src=True)
+                if img:
+                    value = str(img.get("src")).strip()
+                    if value:
+                        return value
+                return None
+
+            def normalize_image_url(value: str, page_url: str) -> str:
+                from urllib.parse import urljoin
+                if value.startswith("//"):
+                    return f"https:{value}"
+                if value.startswith("/"):
+                    return urljoin(page_url, value)
+                return value
+
+            url_to_record = {item.product_url: item for item in catalog_items}
+            updated_images = 0
+            for url, html in html_results.items():
+                record = url_to_record.get(url)
+                if not record:
+                    continue
+                raw_image_url = extract_image_url(html, url)
+                if not raw_image_url:
+                    continue
+                image_url = normalize_image_url(raw_image_url, url)
+                if image_url == record.image_url:
+                    continue
+                if catalog_repo.update_image_url(run_id, url, image_url):
+                    updated_images += 1
+
+            if updated_images:
+                logger.info(
+                    f"Updated image_url for {updated_images} products",
+                    extra={"run_id": run_id, "updated_images": updated_images},
+                )
 
             # Save HTML snapshots to filesystem
             import os

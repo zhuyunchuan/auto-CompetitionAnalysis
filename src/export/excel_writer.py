@@ -12,7 +12,6 @@ from datetime import datetime
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
-from openpyxl.utils.dataframe import dataframe_to_rows
 
 from src.storage.schema import ProductCatalog, ProductSpecLong, DataQualityIssue, RunSummary
 from src.core.logging import get_logger
@@ -52,6 +51,7 @@ class ExcelWriter:
         'product_model',
         'product_name',
         'product_url',
+        'image_url',
         'catalog_status',
     ]
 
@@ -227,7 +227,8 @@ class ExcelWriter:
                 ws.cell(row=row_idx, column=4, value=record.product_model)
                 ws.cell(row=row_idx, column=5, value=record.product_name)
                 ws.cell(row=row_idx, column=6, value=record.product_url)
-                ws.cell(row=row_idx, column=7, value=record.catalog_status)
+                ws.cell(row=row_idx, column=7, value=record.image_url)
+                ws.cell(row=row_idx, column=8, value=record.catalog_status)
 
             # Apply borders to all data cells
             self._apply_borders(ws, max_row=len(records) + 1, max_col=len(self.CATALOG_COLUMNS))

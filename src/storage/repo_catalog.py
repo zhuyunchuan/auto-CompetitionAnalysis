@@ -379,6 +379,23 @@ class CatalogRepository:
 
         return count
 
+    def update_image_url(
+        self,
+        run_id: str,
+        product_url: str,
+        image_url: Optional[str],
+    ) -> int:
+        count = self.session.query(ProductCatalog).filter(
+            and_(
+                ProductCatalog.run_id == run_id,
+                ProductCatalog.product_url == product_url,
+            )
+        ).update(
+            {"image_url": image_url},
+            synchronize_session=False,
+        )
+        return count
+
     def mark_discontinued(
         self,
         run_id: str,
