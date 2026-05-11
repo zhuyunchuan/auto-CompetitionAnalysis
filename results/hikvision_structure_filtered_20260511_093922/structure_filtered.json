@@ -1,0 +1,148 @@
+{
+  "generated_at": "2026-05-11T09:39:23.065Z",
+  "series": {
+    "Pro": {},
+    "Value": {
+      "Value Series": {
+        "series_l1": "Value",
+        "subseries": "Value Series",
+        "count_hint": 157,
+        "sample_models": [
+          {
+            "model": "DS-2CD1027G3-LIU-F---SL---SRB-",
+            "name": "DS-2CD1027G3-LIU(F)(/SL)(/SRB) NEW 2 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1027g3-liu-f---sl---srb-/"
+          },
+          {
+            "model": "DS-2CD1047G3-LIU-F---SL---SRB-",
+            "name": "DS-2CD1047G3-LIU(F)(/SL)(/SRB) NEW 4 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1047g3-liu-f---sl---srb-/"
+          },
+          {
+            "model": "DS-2CD1047G3H-LIU-F---SL---SRB-",
+            "name": "DS-2CD1047G3H-LIU(F)(/SL)(/SRB) NEW 4 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1047g3h-liu-f---sl---srb-/"
+          },
+          {
+            "model": "DS-2CD1147G3H-LIU-F---SL---SRB-",
+            "name": "DS-2CD1147G3H-LIU(F)(/SL)(/SRB) NEW 4 MP ColorVu 3.0 Fixed Dome Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1147g3h-liu-f---sl---srb-/"
+          },
+          {
+            "model": "DS-2CD1327G3-LIU-F---SL---SRB-",
+            "name": "DS-2CD1327G3-LIU(F)(/SL)(/SRB) NEW 2 MP ColorVu 3.0 Fixed Turret Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1327g3-liu-f---sl---srb-/"
+          },
+          {
+            "model": "DS-2CD1347G3-LIU-F---SL---SRB-",
+            "name": "DS-2CD1347G3-LIU(F)(/SL)(/SRB) NEW 4 MP ColorVu 3.0 Fixed Turret Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1347g3-liu-f---sl---srb-/"
+          },
+          {
+            "model": "DS-2CD1347G3H-LIU-F---SL---SRB-",
+            "name": "DS-2CD1347G3H-LIU(F)(/SL)(/SRB) NEW 4 MP ColorVu 3.0 Fixed Turret Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1347g3h-liu-f---sl---srb-/"
+          },
+          {
+            "model": "DS-2CD1B27G3-LIU-F--LS-L--RB-",
+            "name": "DS-2CD1B27G3-LIU(F)/LS(L)(RB) NEW 2 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1b27g3-liu-f--ls-l--rb-/"
+          },
+          {
+            "model": "DS-2CD1B47G3-LIU-F--LS-L--RB-",
+            "name": "DS-2CD1B47G3-LIU(F)/LS(L)(RB) NEW 4 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1b47g3-liu-f--ls-l--rb-/"
+          },
+          {
+            "model": "DS-2CD1B47G3H-LIU-F---SL---SRB-",
+            "name": "DS-2CD1B47G3H-LIU(F)(/SL)(/SRB) NEW 4 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1b47g3h-liu-f---sl---srb-/"
+          },
+          {
+            "model": "DS-2CD1B67G3-LIU-F--LS-L--RB-",
+            "name": "DS-2CD1B67G3-LIU(F)/LS(L)(RB) NEW 6 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1b67g3-liu-f--ls-l--rb-/"
+          },
+          {
+            "model": "DS-2CD1F47G3H-LIU-F---SX-",
+            "name": "DS-2CD1F47G3H-LIU(F)(/SX) NEW 4 MP ColorVu 3.0 Fixed PT Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1f47g3h-liu-f---sx-/"
+          }
+        ]
+      }
+    },
+    "HiLook": {
+      "Value Camera": {
+        "series_l1": "HiLook",
+        "subseries": "Value Camera",
+        "count_hint": 142,
+        "sample_models": [
+          {
+            "model": "IPC-B129HA",
+            "name": "IPC-B129HA 2 MP ColorVu MD 2.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/HiLook-IP-Products/Network-Cameras/Value-Camera/ipc-b129ha/"
+          },
+          {
+            "model": "IPC-B129HA-LU",
+            "name": "IPC-B129HA-LU 2 MP ColorVu with Smart Hybrid Light Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/HiLook-IP-Products/Network-Cameras/Value-Camera/ipc-b129ha-lu/"
+          },
+          {
+            "model": "IPC-B129HA-LUF-S-L--RB-",
+            "name": "IPC-B129HA-LUF/S(L)(RB) 2 MP ColorVu with Smart Hybrid Light Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/HiLook-IP-Products/Network-Cameras/Value-Camera/ipc-b129ha-luf-s-l--rb-/"
+          },
+          {
+            "model": "IPC-B129HAA-LU-F---SL---SRB-",
+            "name": "IPC-B129HAA-LU(F)(/SL)(/SRB) NEW 2 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/HiLook-IP-Products/Network-Cameras/Value-Camera/ipc-b129haa-lu-f---sl---srb-/"
+          },
+          {
+            "model": "IPC-B149HA",
+            "name": "IPC-B149HA 4 MP ColorVu MD 2.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/HiLook-IP-Products/Network-Cameras/Value-Camera/ipc-b149ha/"
+          },
+          {
+            "model": "IPC-B149HA-LU",
+            "name": "IPC-B149HA-LU 4 MP ColorVu with Smart Hybrid Light Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/HiLook-IP-Products/Network-Cameras/Value-Camera/ipc-b149ha-lu/"
+          },
+          {
+            "model": "IPC-B149HA-LUF-S-L--RB-",
+            "name": "IPC-B149HA-LUF/S(L)(RB) 4 MP ColorVu with Smart Hybrid Light Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/HiLook-IP-Products/Network-Cameras/Value-Camera/ipc-b149ha-luf-s-l--rb-/"
+          },
+          {
+            "model": "IPC-B149HAA-LU-F---SL---SRB-",
+            "name": "IPC-B149HAA-LU(F)(/SL)(/SRB) NEW 4 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/HiLook-IP-Products/Network-Cameras/Value-Camera/ipc-b149haa-lu-f---sl---srb-/"
+          },
+          {
+            "model": "IPC-B429HAA-LU-F---SL---SRB-",
+            "name": "IPC-B429HAA-LU(F)(/SL)(/SRB) NEW 2 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/HiLook-IP-Products/Network-Cameras/Value-Camera/ipc-b429haa-lu-f---sl---srb-/"
+          },
+          {
+            "model": "IPC-B449HAA-LU-F---SL---SRB-",
+            "name": "IPC-B449HAA-LU(F)(/SL)(/SRB) NEW 4 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/HiLook-IP-Products/Network-Cameras/Value-Camera/ipc-b449haa-lu-f---sl---srb-/"
+          },
+          {
+            "model": "IPC-T229HAA-LU-F---SL---SRB-",
+            "name": "IPC-T229HAA-LU(F)(/SL)(/SRB) NEW 2 MP ColorVu 3.0 Fixed Turret Network Camera",
+            "url": "https://www.hikvision.com/en/products/HiLook-IP-Products/Network-Cameras/Value-Camera/ipc-t229haa-lu-f---sl---srb-/"
+          },
+          {
+            "model": "IPC-T249HAA-LU-F---SL---SRB-",
+            "name": "IPC-T249HAA-LU(F)(/SL)(/SRB) NEW 4 MP ColorVu 3.0 Fixed Turret Network Camera",
+            "url": "https://www.hikvision.com/en/products/HiLook-IP-Products/Network-Cameras/Value-Camera/ipc-t249haa-lu-f---sl---srb-/"
+          }
+        ]
+      }
+    }
+  },
+  "notes": [
+    "本结构为首次组织尝试：Pro 通过页面 Subseries 过滤器枚举；Value 暂按单一子系列；HiLook 按 Value Camera 页面枚举。",
+    "每个 subseries 目前只抓取了页面可见范围内的型号（用于结构核对），并未强制翻完全部分页。"
+  ]
+}
