@@ -1,9 +1,10 @@
 {
   "processed": 699,
   "total": 699,
-  "ok_models": 692,
-  "zero_models": 4,
-  "err_models": 3,
-  "updated_at": "2026-05-11T12:58:58.524Z",
-  "finished": true
+  "ok_models": 696,
+  "zero_models": 3,
+  "err_models": 0,
+  "updated_at": "2026-05-11T13:31:43.059Z",
+  "finished": true,
+  "unavailable_models": 3
 }
