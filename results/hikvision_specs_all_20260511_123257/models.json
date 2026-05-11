@@ -1,0 +1,42 @@
+[
+  {
+    "brand": "hikvision",
+    "series_l1": "Pro",
+    "subseries": "EasyIP 4.0 Series ColorVu",
+    "model": "PRODUCTS",
+    "name": "Products",
+    "url": "https://www.hikvision.com/en/products/"
+  },
+  {
+    "brand": "hikvision",
+    "series_l1": "Pro",
+    "subseries": "EasyIP 4.0 Series ColorVu",
+    "model": "ACCESS-CONTROL-PRODUCTS",
+    "name": "Access Control",
+    "url": "https://www.hikvision.com/en/products/Access-Control-Products/"
+  },
+  {
+    "brand": "hikvision",
+    "series_l1": "Pro",
+    "subseries": "EasyIP 4.0 Series ColorVu",
+    "model": "ACCESSORY-SELECTOR",
+    "name": "Accessory Selector Use the search criteria to find all available accessories for your camera model. View All",
+    "url": "https://www.hikvision.com/en/products/accessory-selector/"
+  },
+  {
+    "brand": "hikvision",
+    "series_l1": "Pro",
+    "subseries": "EasyIP 4.0 Series ColorVu",
+    "model": "ALARM-PRODUCTS",
+    "name": "Alarm",
+    "url": "https://www.hikvision.com/en/products/Alarm-Products/"
+  },
+  {
+    "brand": "hikvision",
+    "series_l1": "Pro",
+    "subseries": "EasyIP 4.0 Series ColorVu",
+    "model": "AUDIO-PRODUCTS",
+    "name": "Audio Products",
+    "url": "https://www.hikvision.com/en/products/audio-products/"
+  }
+]
