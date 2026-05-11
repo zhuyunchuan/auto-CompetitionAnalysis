@@ -1,0 +1,1728 @@
+{
+  "generated_at": "2026-05-11T13:06:18.800Z",
+  "brand": "dahua",
+  "entry": {
+    "wizsense2": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series",
+    "wizsense3": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series"
+  },
+  "series": {
+    "WizSense 2": {
+      "series_l1": "WizSense 2",
+      "series_l1_raw": "WizSense 2 Series",
+      "series_page": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series",
+      "discovered_tabs": [
+        "WizColor",
+        "Smart Dual Light",
+        "IR"
+      ],
+      "subseries": {
+        "WizColor": {
+          "series_l1": "WizSense 2",
+          "subseries": "WizColor",
+          "models_count": 17,
+          "models": [
+            {
+              "model": "IPC-HDW2249T-S-PRO",
+              "name": "2MP WizColor Fixed-focal Eyeball WizSense Network Camera IPC-HDW2249T-S-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hdw2249t-s-pro"
+            },
+            {
+              "model": "IPC-HDW2249TH-S-PROX",
+              "name": "2MP WizColor X Fixed-focal Eyeball WizSense Network Camera IPC-HDW2249TH-S-PROX Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hdw2249th-s-prox"
+            },
+            {
+              "model": "IPC-HDW2449T-S-PRO=S1",
+              "name": "4MP WizColor Fixed-focal Eyeball WizSense Network Camera IPC-HDW2449T-S-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hdw2449t-s-pro=s1"
+            },
+            {
+              "model": "IPC-HDW2449TH-S-PROX",
+              "name": "4MP WizColor X Fixed-focal Eyeball WizSense Network Camera IPC-HDW2449TH-S-PROX Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hdw2449th-s-prox"
+            },
+            {
+              "model": "IPC-HDW2649T-S-PRO",
+              "name": "6MP WizColor Fixed-focal Eyeball WizSense Network Camera IPC-HDW2649T-S-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hdw2649t-s-pro"
+            },
+            {
+              "model": "IPC-HDW2849T-S-PRO",
+              "name": "8MP WizColor Fixed-focal Eyeball WizSense Network Camera IPC-HDW2849T-S-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hdw2849t-s-pro"
+            },
+            {
+              "model": "IPC-HFW2249M-S-B-PRO",
+              "name": "2MP WizColor Fixed-focal Bullet WizSense Network Camera IPC-HFW2249M-S-B-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2249m-s-b-pro"
+            },
+            {
+              "model": "IPC-HFW2249TL-S-PRO",
+              "name": "2MP WizColor Fixed-focal Bullet WizSense Network Camera IPC-HFW2249TL-S-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2249tl-s-pro"
+            },
+            {
+              "model": "IPC-HFW2249TL-S-PROX",
+              "name": "2MP WizColor X Fixed-focal Bullet WizSense Network Camera IPC-HFW2249TL-S-PROX Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2249tl-s-prox"
+            },
+            {
+              "model": "IPC-HFW2449M-S-B-PRO=S1",
+              "name": "4MP WizColor Fixed-focal Bullet WizSense Network Camera IPC-HFW2449M-S-B-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2449m-s-b-pro=s1"
+            },
+            {
+              "model": "IPC-HFW2449TL-S-PRO=S1",
+              "name": "4MP WizColor Fixed-focal Bullet WizSense Network Camera IPC-HFW2449TL-S-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2449tl-s-pro=s1"
+            },
+            {
+              "model": "IPC-HFW2449TL-S-PROX",
+              "name": "4MP WizColor X Fixed-focal Bullet WizSense Network Camera IPC-HFW2449TL-S-PROX Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2449tl-s-prox"
+            },
+            {
+              "model": "IPC-HFW2649M-S-B-PRO",
+              "name": "6MP WizColor Fixed-focal Bullet WizSense Network Camera IPC-HFW2649M-S-B-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2649m-s-b-pro"
+            },
+            {
+              "model": "IPC-HFW2649TL-S-PRO",
+              "name": "6MP WizColor Fixed-focal Bullet WizSense Network Camera IPC-HFW2649TL-S-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2649tl-s-pro"
+            },
+            {
+              "model": "IPC-HFW2849M-S-B-PRO",
+              "name": "8MP WizColor Fixed-focal Bullet WizSense Network Camera IPC-HFW2849M-S-B-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2849m-s-b-pro"
+            },
+            {
+              "model": "IPC-HFW2849TL-S-PRO",
+              "name": "8MP WizColor Fixed-focal Bullet WizSense Network Camera IPC-HFW2849TL-S-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2849tl-s-pro"
+            },
+            {
+              "model": "IPC-PTS2249B-E2-S-PV-PRO",
+              "name": "2+2 MP WizColor Active Deterrance Dual-lens Fixed-focal Pan & Tilt WizSense Network Camera IPC-PTS2249B-E2-S-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-pts2249b-e2-s-pv-pro"
+            }
+          ],
+          "sample_models": [
+            {
+              "model": "IPC-HDW2249T-S-PRO",
+              "name": "2MP WizColor Fixed-focal Eyeball WizSense Network Camera IPC-HDW2249T-S-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hdw2249t-s-pro"
+            },
+            {
+              "model": "IPC-HDW2249TH-S-PROX",
+              "name": "2MP WizColor X Fixed-focal Eyeball WizSense Network Camera IPC-HDW2249TH-S-PROX Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hdw2249th-s-prox"
+            },
+            {
+              "model": "IPC-HDW2449T-S-PRO=S1",
+              "name": "4MP WizColor Fixed-focal Eyeball WizSense Network Camera IPC-HDW2449T-S-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hdw2449t-s-pro=s1"
+            },
+            {
+              "model": "IPC-HDW2449TH-S-PROX",
+              "name": "4MP WizColor X Fixed-focal Eyeball WizSense Network Camera IPC-HDW2449TH-S-PROX Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hdw2449th-s-prox"
+            },
+            {
+              "model": "IPC-HDW2649T-S-PRO",
+              "name": "6MP WizColor Fixed-focal Eyeball WizSense Network Camera IPC-HDW2649T-S-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hdw2649t-s-pro"
+            },
+            {
+              "model": "IPC-HDW2849T-S-PRO",
+              "name": "8MP WizColor Fixed-focal Eyeball WizSense Network Camera IPC-HDW2849T-S-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hdw2849t-s-pro"
+            },
+            {
+              "model": "IPC-HFW2249M-S-B-PRO",
+              "name": "2MP WizColor Fixed-focal Bullet WizSense Network Camera IPC-HFW2249M-S-B-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2249m-s-b-pro"
+            },
+            {
+              "model": "IPC-HFW2249TL-S-PRO",
+              "name": "2MP WizColor Fixed-focal Bullet WizSense Network Camera IPC-HFW2249TL-S-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2249tl-s-pro"
+            },
+            {
+              "model": "IPC-HFW2249TL-S-PROX",
+              "name": "2MP WizColor X Fixed-focal Bullet WizSense Network Camera IPC-HFW2249TL-S-PROX Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2249tl-s-prox"
+            },
+            {
+              "model": "IPC-HFW2449M-S-B-PRO=S1",
+              "name": "4MP WizColor Fixed-focal Bullet WizSense Network Camera IPC-HFW2449M-S-B-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2449m-s-b-pro=s1"
+            },
+            {
+              "model": "IPC-HFW2449TL-S-PRO=S1",
+              "name": "4MP WizColor Fixed-focal Bullet WizSense Network Camera IPC-HFW2449TL-S-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2449tl-s-pro=s1"
+            },
+            {
+              "model": "IPC-HFW2449TL-S-PROX",
+              "name": "4MP WizColor X Fixed-focal Bullet WizSense Network Camera IPC-HFW2449TL-S-PROX Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2449tl-s-prox"
+            },
+            {
+              "model": "IPC-HFW2649M-S-B-PRO",
+              "name": "6MP WizColor Fixed-focal Bullet WizSense Network Camera IPC-HFW2649M-S-B-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2649m-s-b-pro"
+            },
+            {
+              "model": "IPC-HFW2649TL-S-PRO",
+              "name": "6MP WizColor Fixed-focal Bullet WizSense Network Camera IPC-HFW2649TL-S-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2649tl-s-pro"
+            },
+            {
+              "model": "IPC-HFW2849M-S-B-PRO",
+              "name": "8MP WizColor Fixed-focal Bullet WizSense Network Camera IPC-HFW2849M-S-B-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2849m-s-b-pro"
+            },
+            {
+              "model": "IPC-HFW2849TL-S-PRO",
+              "name": "8MP WizColor Fixed-focal Bullet WizSense Network Camera IPC-HFW2849TL-S-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-hfw2849tl-s-pro"
+            },
+            {
+              "model": "IPC-PTS2249B-E2-S-PV-PRO",
+              "name": "2+2 MP WizColor Active Deterrance Dual-lens Fixed-focal Pan & Tilt WizSense Network Camera IPC-PTS2249B-E2-S-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/wizcolor/ipc-pts2249b-e2-s-pv-pro"
+            }
+          ]
+        },
+        "Smart Dual Light": {
+          "series_l1": "WizSense 2",
+          "subseries": "Smart Dual Light",
+          "models_count": 48,
+          "models": [
+            {
+              "model": "IPC-HDBW2249E-S-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW2249E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdbw2249e-s-il"
+            },
+            {
+              "model": "IPC-HDBW2249F-AS-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW2249F-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdbw2249f-as-il"
+            },
+            {
+              "model": "IPC-HDBW2449E-S-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW2449E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdbw2449e-s-il"
+            },
+            {
+              "model": "IPC-HDBW2449F-AS-E2-IL",
+              "name": "2 × 4 MP Smart Dual Light Fixed-focal Dual-Directional Dome WizSense Network Camera IPC-HDBW2449F-AS-E2-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdbw2449f-as-e2-il"
+            },
+            {
+              "model": "IPC-HDBW2449F-AS-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW2449F-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdbw2449f-as-il"
+            },
+            {
+              "model": "IPC-HDBW2549E-S-IL",
+              "name": "5MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW2549E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdbw2549e-s-il"
+            },
+            {
+              "model": "IPC-HDBW2649E-S-IL",
+              "name": "6MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW2649E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdbw2649e-s-il"
+            },
+            {
+              "model": "IPC-HDBW2849E-S-IL",
+              "name": "8MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW2849E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdbw2849e-s-il"
+            },
+            {
+              "model": "IPC-HDW21249T-S-IL=S2",
+              "name": "12MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW21249T-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw21249t-s-il=s2"
+            },
+            {
+              "model": "IPC-HDW2249T-S-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW2249T-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2249t-s-il"
+            },
+            {
+              "model": "IPC-HDW2249T-ZS-IL",
+              "name": "2MP Smart Dual Light Vari-focal Eyeball WizSense Network Camera IPC-HDW2249T-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2249t-zs-il"
+            },
+            {
+              "model": "IPC-HDW2249TM-S-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HDW2249TM-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2249tm-s-il"
+            },
+            {
+              "model": "IPC-HDW2449T-S-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW2449T-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2449t-s-il"
+            },
+            {
+              "model": "IPC-HDW2449T-S-PV",
+              "name": "4MP Smart Dual Light Active Deterrence Fixed-focal Eyeball WizSense Network Camera IPC-HDW2449T-S-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2449t-s-pv"
+            },
+            {
+              "model": "IPC-HDW2449T-ZS-IL",
+              "name": "4MP Smart Dual Light Vari-focal Eyeball WizSense Network Camera IPC-HDW2449T-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2449t-zs-il"
+            },
+            {
+              "model": "IPC-HDW2449TM-S-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW2449TM-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2449tm-s-il"
+            },
+            {
+              "model": "IPC-HDW2549T-S-IL",
+              "name": "5MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW2549T-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2549t-s-il"
+            },
+            {
+              "model": "IPC-HDW2549T-S-PV",
+              "name": "5MP Smart Dual Light Active Deterrence Fixed-focal Eyeball WizSense Network Camera IPC-HDW2549T-S-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2549t-s-pv"
+            },
+            {
+              "model": "IPC-HDW2549T-ZS-IL",
+              "name": "5MP Smart Dual Light Vari-focal Eyeball WizSense Network Camera IPC-HDW2549T-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2549t-zs-il"
+            },
+            {
+              "model": "IPC-HDW2549TM-S-IL",
+              "name": "5MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW2549TM-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2549tm-s-il"
+            },
+            {
+              "model": "IPC-HDW2649T-S-IL",
+              "name": "6MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW2649T-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2649t-s-il"
+            },
+            {
+              "model": "IPC-HDW2649T-ZS-IL",
+              "name": "6MP Smart Dual Light Vari-focal Eyeball WizSense Network Camera IPC-HDW2649T-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2649t-zs-il"
+            },
+            {
+              "model": "IPC-HDW2649TM-S-IL",
+              "name": "6MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW2649TM-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2649tm-s-il"
+            },
+            {
+              "model": "IPC-HDW2849T-S-IL",
+              "name": "8MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW2849T-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2849t-s-il"
+            },
+            {
+              "model": "IPC-HDW2849T-ZS-IL",
+              "name": "8MP Smart Dual Light Vari-focal Eyeball WizSense Network Camera IPC-HDW2849T-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2849t-zs-il"
+            },
+            {
+              "model": "IPC-HDW2849TM-S-IL",
+              "name": "8MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW2849TM-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2849tm-s-il"
+            },
+            {
+              "model": "IPC-HFW21249T-AS-IL=S2",
+              "name": "12MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW21249T-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw21249t-as-il=s2"
+            },
+            {
+              "model": "IPC-HFW21249T-S-IL=S2",
+              "name": "12MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW21249T-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw21249t-s-il=s2"
+            },
+            {
+              "model": "IPC-HFW2249S-S-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW2249S-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2249s-s-il"
+            },
+            {
+              "model": "IPC-HFW2249T-AS-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW2249T-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2249t-as-il"
+            },
+            {
+              "model": "IPC-HFW2249T-ZAS-IL",
+              "name": "2MP Smart Dual Light Vari-focal Bullet WizSense Network Camera IPC-HFW2249T-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2249t-zas-il"
+            },
+            {
+              "model": "IPC-HFW2249TL-S-PV",
+              "name": "2MP Smart Dual Light Active Deterrence Fixed-focal Bullet WizSense Network Camera IPC-HFW2249TL-S-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2249tl-s-pv"
+            },
+            {
+              "model": "IPC-HFW2449S-S-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW2449S-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2449s-s-il"
+            },
+            {
+              "model": "IPC-HFW2449T-AS-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW2449T-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2449t-as-il"
+            },
+            {
+              "model": "IPC-HFW2449T-ZAS-IL",
+              "name": "4MP Smart Dual Light Vari-focal Bullet WizSense Network Camera IPC-HFW2449T-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2449t-zas-il"
+            },
+            {
+              "model": "IPC-HFW2449TL-S-PV",
+              "name": "4MP Smart Dual Light Active Deterrence Fixed-focal Bullet WizSense Network Camera IPC-HFW2449TL-S-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2449tl-s-pv"
+            },
+            {
+              "model": "IPC-HFW2549S-S-IL",
+              "name": "5MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW2549S-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2549s-s-il"
+            },
+            {
+              "model": "IPC-HFW2549T-AS-IL",
+              "name": "5MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW2549T-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2549t-as-il"
+            },
+            {
+              "model": "IPC-HFW2549T-ZAS-IL",
+              "name": "5MP Smart Dual Light Vari-focal Bullet WizSense Network Camera IPC-HFW2549T-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2549t-zas-il"
+            },
+            {
+              "model": "IPC-HFW2549TL-S-PV",
+              "name": "5MP Smart Dual Light Active Deterrence Fixed-focal Bullet WizSense Network Camera IPC-HFW2549TL-S-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2549tl-s-pv"
+            },
+            {
+              "model": "IPC-HFW2649S-S-IL",
+              "name": "6MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW2649S-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2649s-s-il"
+            },
+            {
+              "model": "IPC-HFW2649T-AS-IL",
+              "name": "6MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW2649T-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2649t-as-il"
+            },
+            {
+              "model": "IPC-HFW2649T-ZAS-IL",
+              "name": "6MP Smart Dual Light Vari-focal Bullet WizSense Network Camera IPC-HFW2649T-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2649t-zas-il"
+            },
+            {
+              "model": "IPC-HFW2849S-S-IL",
+              "name": "8MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW2849S-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2849s-s-il"
+            },
+            {
+              "model": "IPC-HFW2849T-AS-IL",
+              "name": "8MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW2849T-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2849t-as-il"
+            },
+            {
+              "model": "IPC-HFW2849T-ZAS-IL",
+              "name": "8MP Smart Dual Light Vari-focal Bullet WizSense Network Camera IPC-HFW2849T-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hfw2849t-zas-il"
+            },
+            {
+              "model": "IPC-PDW2849-A180-S-PV",
+              "name": "2x4MP Duo Splicing Fixed-focal Eyeball WizSense Network Camera IPC-PDW2849-A180-S-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-pdw2849-a180-s-pv"
+            },
+            {
+              "model": "IPC-PFW2849S-A180-S-PV",
+              "name": "2x4MP Duo Splicing Fixed-focal Bullet WizSense Network Camera IPC-PFW2849S-A180-S-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-pfw2849s-a180-s-pv"
+            }
+          ],
+          "sample_models": [
+            {
+              "model": "IPC-HDBW2249E-S-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW2249E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdbw2249e-s-il"
+            },
+            {
+              "model": "IPC-HDBW2249F-AS-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW2249F-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdbw2249f-as-il"
+            },
+            {
+              "model": "IPC-HDBW2449E-S-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW2449E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdbw2449e-s-il"
+            },
+            {
+              "model": "IPC-HDBW2449F-AS-E2-IL",
+              "name": "2 × 4 MP Smart Dual Light Fixed-focal Dual-Directional Dome WizSense Network Camera IPC-HDBW2449F-AS-E2-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdbw2449f-as-e2-il"
+            },
+            {
+              "model": "IPC-HDBW2449F-AS-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW2449F-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdbw2449f-as-il"
+            },
+            {
+              "model": "IPC-HDBW2549E-S-IL",
+              "name": "5MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW2549E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdbw2549e-s-il"
+            },
+            {
+              "model": "IPC-HDBW2649E-S-IL",
+              "name": "6MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW2649E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdbw2649e-s-il"
+            },
+            {
+              "model": "IPC-HDBW2849E-S-IL",
+              "name": "8MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW2849E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdbw2849e-s-il"
+            },
+            {
+              "model": "IPC-HDW21249T-S-IL=S2",
+              "name": "12MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW21249T-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw21249t-s-il=s2"
+            },
+            {
+              "model": "IPC-HDW2249T-S-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW2249T-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2249t-s-il"
+            },
+            {
+              "model": "IPC-HDW2249T-ZS-IL",
+              "name": "2MP Smart Dual Light Vari-focal Eyeball WizSense Network Camera IPC-HDW2249T-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2249t-zs-il"
+            },
+            {
+              "model": "IPC-HDW2249TM-S-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HDW2249TM-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2249tm-s-il"
+            },
+            {
+              "model": "IPC-HDW2449T-S-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW2449T-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2449t-s-il"
+            },
+            {
+              "model": "IPC-HDW2449T-S-PV",
+              "name": "4MP Smart Dual Light Active Deterrence Fixed-focal Eyeball WizSense Network Camera IPC-HDW2449T-S-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2449t-s-pv"
+            },
+            {
+              "model": "IPC-HDW2449T-ZS-IL",
+              "name": "4MP Smart Dual Light Vari-focal Eyeball WizSense Network Camera IPC-HDW2449T-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2449t-zs-il"
+            },
+            {
+              "model": "IPC-HDW2449TM-S-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW2449TM-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2449tm-s-il"
+            },
+            {
+              "model": "IPC-HDW2549T-S-IL",
+              "name": "5MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW2549T-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2549t-s-il"
+            },
+            {
+              "model": "IPC-HDW2549T-S-PV",
+              "name": "5MP Smart Dual Light Active Deterrence Fixed-focal Eyeball WizSense Network Camera IPC-HDW2549T-S-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2549t-s-pv"
+            },
+            {
+              "model": "IPC-HDW2549T-ZS-IL",
+              "name": "5MP Smart Dual Light Vari-focal Eyeball WizSense Network Camera IPC-HDW2549T-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2549t-zs-il"
+            },
+            {
+              "model": "IPC-HDW2549TM-S-IL",
+              "name": "5MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW2549TM-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/smart-dual-light/ipc-hdw2549tm-s-il"
+            }
+          ]
+        },
+        "IR": {
+          "series_l1": "WizSense 2",
+          "subseries": "IR",
+          "models_count": 40,
+          "models": [
+            {
+              "model": "IPC-HDBW2241E-S",
+              "name": "2MP IR Fixed-focal Dome WizSense Network Camera IPC-HDBW2241E-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2241e-s"
+            },
+            {
+              "model": "IPC-HDBW2241R-ZAS",
+              "name": "2MP IR Vari-focal Dome WizSense Network Camera IPC-HDBW2241R-ZAS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2241r-zas"
+            },
+            {
+              "model": "IPC-HDBW2241R-ZS",
+              "name": "2MP IR Vari-focal Dome WizSense Network Camera IPC-HDBW2241R-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2241r-zs"
+            },
+            {
+              "model": "IPC-HDBW2441E-S",
+              "name": "4MP IR Fixed-focal Dome WizSense Network Camera IPC-HDBW2441E-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2441e-s"
+            },
+            {
+              "model": "IPC-HDBW2441R-ZAS",
+              "name": "4MP IR Vari-focal Dome WizSense Network Camera IPC-HDBW2441R-ZAS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2441r-zas"
+            },
+            {
+              "model": "IPC-HDBW2441R-ZS",
+              "name": "4MP IR Vari-focal Dome WizSense Network Camera IPC-HDBW2441R-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2441r-zs"
+            },
+            {
+              "model": "IPC-HDBW2541E-S=S2",
+              "name": "5MP IR Fixed-focal Dome WizSense Network Camera IPC-HDBW2541E-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2541e-s=s2"
+            },
+            {
+              "model": "IPC-HDBW2541R-ZAS=S2",
+              "name": "5MP IR Vari-focal Dome WizSense Network Camera IPC-HDBW2541R-ZAS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2541r-zas=s2"
+            },
+            {
+              "model": "IPC-HDBW2541R-ZS=S2",
+              "name": "5MP IR Vari-focal Dome WizSense Network Camera IPC-HDBW2541R-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2541r-zs=s2"
+            },
+            {
+              "model": "IPC-HDBW2841E-S",
+              "name": "8MP IR Fixed-focal Dome WizSense Network Camera IPC-HDBW2841E-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2841e-s"
+            },
+            {
+              "model": "IPC-HDBW2841R-ZAS",
+              "name": "8MP IR Vari-focal Dome WizSense Network Camera IPC-HDBW2841R-ZAS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2841r-zas"
+            },
+            {
+              "model": "IPC-HDBW2841R-ZS",
+              "name": "8MP IR Vari-focal Dome WizSense Network Camera IPC-HDBW2841R-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2841r-zs"
+            },
+            {
+              "model": "IPC-HDW2241T-S",
+              "name": "2MP IR Fixed-focal Eyeball WizSense Network Camera IPC-HDW2241T-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2241t-s"
+            },
+            {
+              "model": "IPC-HDW2241T-ZS",
+              "name": "2MP IR Vari-focal Eyeball WizSense Network Camera IPC-HDW2241T-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2241t-zs"
+            },
+            {
+              "model": "IPC-HDW2241TM-S",
+              "name": "2MP IR Fixed-focal Eyeball WizSense Network Camera IPC-HDW2241TM-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2241tm-s"
+            },
+            {
+              "model": "IPC-HDW2441T-S",
+              "name": "4MP IR Fixed-focal Eyeball WizSense Network Camera IPC-HDW2441T-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2441t-s"
+            },
+            {
+              "model": "IPC-HDW2441T-ZS",
+              "name": "4MP IR Vari-focal Eyeball WizSense Network Camera IPC-HDW2441T-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2441t-zs"
+            },
+            {
+              "model": "IPC-HDW2441TM-S",
+              "name": "4MP IR Fixed-focal Eyeball WizSense Network Camera IPC-HDW2441TM-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2441tm-s"
+            },
+            {
+              "model": "IPC-HDW2541T-S=S2",
+              "name": "5MP IR Fixed-focal Eyeball WizSense Network Camera IPC-HDW2541T-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2541t-s=s2"
+            },
+            {
+              "model": "IPC-HDW2541T-ZS=S2",
+              "name": "5MP IR Vari-focal Eyeball WizSense Network Camera IPC-HDW2541T-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2541t-zs=s2"
+            },
+            {
+              "model": "IPC-HDW2541TM-S=S2",
+              "name": "5MP IR Fixed-focal Eyeball WizSense Network Camera IPC-HDW2541TM-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2541tm-s=s2"
+            },
+            {
+              "model": "IPC-HDW2841T-S",
+              "name": "8MP IR Fixed-focal Eyeball WizSense Network Camera IPC-HDW2841T-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2841t-s"
+            },
+            {
+              "model": "IPC-HDW2841T-ZS",
+              "name": "8MP IR Vari-focal Eyeball WizSense Network Camera IPC-HDW2841T-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2841t-zs"
+            },
+            {
+              "model": "IPC-HDW2841TM-S",
+              "name": "8MP IR Fixed-focal Eyeball WizSense Network Camera IPC-HDW2841TM-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2841tm-s"
+            },
+            {
+              "model": "IPC-HFW2241S-S",
+              "name": "2MP IR Fixed-focal Bullet WizSense Network Camera IPC-HFW2241S-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hfw2241s-s"
+            },
+            {
+              "model": "IPC-HFW2241T-AS",
+              "name": "2MP IR Fixed-focal Bullet WizSense Network Camera IPC-HFW2241T-AS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hfw2241t-as"
+            },
+            {
+              "model": "IPC-HFW2241T-ZAS",
+              "name": "2MP IR Vari-focal Bullet WizSense Network Camera IPC-HFW2241T-ZAS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hfw2241t-zas"
+            },
+            {
+              "model": "IPC-HFW2241T-ZS",
+              "name": "2MP IR Vari-focal Bullet WizSense Network Camera IPC-HFW2241T-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hfw2241t-zs"
+            },
+            {
+              "model": "IPC-HFW2441S-S",
+              "name": "4MP IR Fixed-focal Bullet WizSense Network Camera IPC-HFW2441S-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hfw2441s-s"
+            },
+            {
+              "model": "IPC-HFW2441T-AS",
+              "name": "4MP IR Fixed-focal Bullet WizSense Network Camera IPC-HFW2441T-AS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hfw2441t-as"
+            },
+            {
+              "model": "IPC-HFW2441T-ZAS",
+              "name": "4MP IR Vari-focal Bullet WizSense Network Camera IPC-HFW2441T-ZAS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hfw2441t-zas"
+            },
+            {
+              "model": "IPC-HFW2441T-ZS",
+              "name": "4MP IR Vari-focal Bullet WizSense Network Camera IPC-HFW2441T-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hfw2441t-zs"
+            },
+            {
+              "model": "IPC-HFW2541S-S=S2",
+              "name": "5MP IR Fixed-focal Bullet WizSense Network Camera IPC-HFW2541S-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hfw2541s-s=s2"
+            },
+            {
+              "model": "IPC-HFW2541T-AS=S2",
+              "name": "5MP IR Fixed-focal Bullet WizSense Network Camera IPC-HFW2541T-AS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hfw2541t-as=s2"
+            },
+            {
+              "model": "IPC-HFW2541T-ZAS=S2",
+              "name": "5MP IR Vari-focal Bullet WizSense Network Camera IPC-HFW2541T-ZAS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hfw2541t-zas=s2"
+            },
+            {
+              "model": "IPC-HFW2541T-ZS=S2",
+              "name": "5MP IR Vari-focal Bullet WizSense Network Camera IPC-HFW2541T-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hfw2541t-zs=s2"
+            },
+            {
+              "model": "IPC-HFW2841S-S",
+              "name": "8MP IR Fixed-focal Bullet WizSense Network Camera IPC-HFW2841S-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hfw2841s-s"
+            },
+            {
+              "model": "IPC-HFW2841T-AS",
+              "name": "8MP IR Fixed-focal Bullet WizSense Network Camera IPC-HFW2841T-AS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hfw2841t-as"
+            },
+            {
+              "model": "IPC-HFW2841T-ZAS",
+              "name": "8MP IR Vari-focal Bullet WizSense Network Camera IPC-HFW2841T-ZAS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hfw2841t-zas"
+            },
+            {
+              "model": "IPC-HFW2841T-ZS",
+              "name": "8MP IR Vari-focal Bullet WizSense Network Camera IPC-HFW2841T-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hfw2841t-zs"
+            }
+          ],
+          "sample_models": [
+            {
+              "model": "IPC-HDBW2241E-S",
+              "name": "2MP IR Fixed-focal Dome WizSense Network Camera IPC-HDBW2241E-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2241e-s"
+            },
+            {
+              "model": "IPC-HDBW2241R-ZAS",
+              "name": "2MP IR Vari-focal Dome WizSense Network Camera IPC-HDBW2241R-ZAS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2241r-zas"
+            },
+            {
+              "model": "IPC-HDBW2241R-ZS",
+              "name": "2MP IR Vari-focal Dome WizSense Network Camera IPC-HDBW2241R-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2241r-zs"
+            },
+            {
+              "model": "IPC-HDBW2441E-S",
+              "name": "4MP IR Fixed-focal Dome WizSense Network Camera IPC-HDBW2441E-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2441e-s"
+            },
+            {
+              "model": "IPC-HDBW2441R-ZAS",
+              "name": "4MP IR Vari-focal Dome WizSense Network Camera IPC-HDBW2441R-ZAS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2441r-zas"
+            },
+            {
+              "model": "IPC-HDBW2441R-ZS",
+              "name": "4MP IR Vari-focal Dome WizSense Network Camera IPC-HDBW2441R-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2441r-zs"
+            },
+            {
+              "model": "IPC-HDBW2541E-S=S2",
+              "name": "5MP IR Fixed-focal Dome WizSense Network Camera IPC-HDBW2541E-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2541e-s=s2"
+            },
+            {
+              "model": "IPC-HDBW2541R-ZAS=S2",
+              "name": "5MP IR Vari-focal Dome WizSense Network Camera IPC-HDBW2541R-ZAS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2541r-zas=s2"
+            },
+            {
+              "model": "IPC-HDBW2541R-ZS=S2",
+              "name": "5MP IR Vari-focal Dome WizSense Network Camera IPC-HDBW2541R-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2541r-zs=s2"
+            },
+            {
+              "model": "IPC-HDBW2841E-S",
+              "name": "8MP IR Fixed-focal Dome WizSense Network Camera IPC-HDBW2841E-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2841e-s"
+            },
+            {
+              "model": "IPC-HDBW2841R-ZAS",
+              "name": "8MP IR Vari-focal Dome WizSense Network Camera IPC-HDBW2841R-ZAS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2841r-zas"
+            },
+            {
+              "model": "IPC-HDBW2841R-ZS",
+              "name": "8MP IR Vari-focal Dome WizSense Network Camera IPC-HDBW2841R-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdbw2841r-zs"
+            },
+            {
+              "model": "IPC-HDW2241T-S",
+              "name": "2MP IR Fixed-focal Eyeball WizSense Network Camera IPC-HDW2241T-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2241t-s"
+            },
+            {
+              "model": "IPC-HDW2241T-ZS",
+              "name": "2MP IR Vari-focal Eyeball WizSense Network Camera IPC-HDW2241T-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2241t-zs"
+            },
+            {
+              "model": "IPC-HDW2241TM-S",
+              "name": "2MP IR Fixed-focal Eyeball WizSense Network Camera IPC-HDW2241TM-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2241tm-s"
+            },
+            {
+              "model": "IPC-HDW2441T-S",
+              "name": "4MP IR Fixed-focal Eyeball WizSense Network Camera IPC-HDW2441T-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2441t-s"
+            },
+            {
+              "model": "IPC-HDW2441T-ZS",
+              "name": "4MP IR Vari-focal Eyeball WizSense Network Camera IPC-HDW2441T-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2441t-zs"
+            },
+            {
+              "model": "IPC-HDW2441TM-S",
+              "name": "4MP IR Fixed-focal Eyeball WizSense Network Camera IPC-HDW2441TM-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2441tm-s"
+            },
+            {
+              "model": "IPC-HDW2541T-S=S2",
+              "name": "5MP IR Fixed-focal Eyeball WizSense Network Camera IPC-HDW2541T-S Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2541t-s=s2"
+            },
+            {
+              "model": "IPC-HDW2541T-ZS=S2",
+              "name": "5MP IR Vari-focal Eyeball WizSense Network Camera IPC-HDW2541T-ZS Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series/ir/ipc-hdw2541t-zs=s2"
+            }
+          ]
+        }
+      }
+    },
+    "WizSense 3": {
+      "series_l1": "WizSense 3",
+      "series_l1_raw": "WizSense 3 Series",
+      "series_page": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series",
+      "discovered_tabs": [
+        "TiOC PRO-WizColor",
+        "Smart Dual Light",
+        "TiOC",
+        "IR",
+        "Anti-Corrosion",
+        "4G Camera",
+        "WizSense Camera"
+      ],
+      "subseries": {
+        "TiOC PRO-WizColor": {
+          "series_l1": "WizSense 3",
+          "subseries": "TiOC PRO-WizColor",
+          "models_count": 15,
+          "models": [
+            {
+              "model": "IPC-HDBW3449R1-ZAS-PV-PRO",
+              "name": "4MP WizColor TiOC PRO Vari-focal Dome WizSense Network Camera IPC-HDBW3449R1-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdbw3449r1-zas-pv-pro"
+            },
+            {
+              "model": "IPC-HDBW3649R1-ZAS-PV-PRO",
+              "name": "6MP WizColor TiOC PRO Vari-focal Dome WizSense Network Camera IPC-HDBW3649R1-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdbw3649r1-zas-pv-pro"
+            },
+            {
+              "model": "IPC-HDBW3849R1-ZAS-PV-PRO",
+              "name": "8MP WizColor TiOC PRO Vari-focal Dome WizSense Network Camera IPC-HDBW3849R1-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdbw3849r1-zas-pv-pro"
+            },
+            {
+              "model": "IPC-HDW3449H-AS-PV-PRO",
+              "name": "4MP WizColor TiOC PRO Fixed-focal Eyeball WizSense Network Camera IPC-HDW3449H-AS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdw3449h-as-pv-pro"
+            },
+            {
+              "model": "IPC-HDW3449H-ZAS-PV-PRO",
+              "name": "4MP WizColor TiOC PRO Vari-focal Eyeball WizSense Network Camera IPC-HDW3449H-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdw3449h-zas-pv-pro"
+            },
+            {
+              "model": "IPC-HDW3649H-AS-PV-PRO",
+              "name": "6MP WizColor TiOC PRO Fixed-focal Eyeball WizSense Network Camera IPC-HDW3649H-AS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdw3649h-as-pv-pro"
+            },
+            {
+              "model": "IPC-HDW3649H-ZAS-PV-PRO",
+              "name": "6MP WizColor TiOC PRO Vari-focal Eyeball WizSense Network Camera IPC-HDW3649H-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdw3649h-zas-pv-pro"
+            },
+            {
+              "model": "IPC-HDW3849H-AS-PV-PRO",
+              "name": "8MP WizColor TiOC PRO Fixed-focal Eyeball WizSense Network Camera IPC-HDW3849H-AS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdw3849h-as-pv-pro"
+            },
+            {
+              "model": "IPC-HDW3849H-ZAS-PV-PRO",
+              "name": "8MP WizColor TiOC PRO Vari-focal Eyeball WizSense Network Camera IPC-HDW3849H-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdw3849h-zas-pv-pro"
+            },
+            {
+              "model": "IPC-HFW3449T1-AS-PV-PRO",
+              "name": "4MP WizColor TiOC PRO Fixed-focal Bullet WizSense Network Camera IPC-HFW3449T1-AS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hfw3449t1-as-pv-pro"
+            },
+            {
+              "model": "IPC-HFW3449T1-ZAS-PV-PRO",
+              "name": "4MP WizColor TiOC PRO Vari-focal Bullet WizSense Network Camera IPC-HFW3449T1-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hfw3449t1-zas-pv-pro"
+            },
+            {
+              "model": "IPC-HFW3649T1-AS-PV-PRO",
+              "name": "6MP WizColor TiOC PRO Fixed-focal Bullet WizSense Network Camera IPC-HFW3649T1-AS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hfw3649t1-as-pv-pro"
+            },
+            {
+              "model": "IPC-HFW3649T1-ZAS-PV-PRO",
+              "name": "6MP WizColor TiOC PRO Vari-focal Bullet WizSense Network Camera IPC-HFW3649T1-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hfw3649t1-zas-pv-pro"
+            },
+            {
+              "model": "IPC-HFW3849T1-AS-PV-PRO",
+              "name": "8MP WizColor TiOC PRO Fixed-focal Bullet WizSense Network Camera IPC-HFW3849T1-AS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hfw3849t1-as-pv-pro"
+            },
+            {
+              "model": "IPC-HFW3849T1-ZAS-PV-PRO",
+              "name": "8MP WizColor TiOC PRO Vari-focal Bullet WizSense Network Camera IPC-HFW3849T1-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hfw3849t1-zas-pv-pro"
+            }
+          ],
+          "sample_models": [
+            {
+              "model": "IPC-HDBW3449R1-ZAS-PV-PRO",
+              "name": "4MP WizColor TiOC PRO Vari-focal Dome WizSense Network Camera IPC-HDBW3449R1-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdbw3449r1-zas-pv-pro"
+            },
+            {
+              "model": "IPC-HDBW3649R1-ZAS-PV-PRO",
+              "name": "6MP WizColor TiOC PRO Vari-focal Dome WizSense Network Camera IPC-HDBW3649R1-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdbw3649r1-zas-pv-pro"
+            },
+            {
+              "model": "IPC-HDBW3849R1-ZAS-PV-PRO",
+              "name": "8MP WizColor TiOC PRO Vari-focal Dome WizSense Network Camera IPC-HDBW3849R1-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdbw3849r1-zas-pv-pro"
+            },
+            {
+              "model": "IPC-HDW3449H-AS-PV-PRO",
+              "name": "4MP WizColor TiOC PRO Fixed-focal Eyeball WizSense Network Camera IPC-HDW3449H-AS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdw3449h-as-pv-pro"
+            },
+            {
+              "model": "IPC-HDW3449H-ZAS-PV-PRO",
+              "name": "4MP WizColor TiOC PRO Vari-focal Eyeball WizSense Network Camera IPC-HDW3449H-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdw3449h-zas-pv-pro"
+            },
+            {
+              "model": "IPC-HDW3649H-AS-PV-PRO",
+              "name": "6MP WizColor TiOC PRO Fixed-focal Eyeball WizSense Network Camera IPC-HDW3649H-AS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdw3649h-as-pv-pro"
+            },
+            {
+              "model": "IPC-HDW3649H-ZAS-PV-PRO",
+              "name": "6MP WizColor TiOC PRO Vari-focal Eyeball WizSense Network Camera IPC-HDW3649H-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdw3649h-zas-pv-pro"
+            },
+            {
+              "model": "IPC-HDW3849H-AS-PV-PRO",
+              "name": "8MP WizColor TiOC PRO Fixed-focal Eyeball WizSense Network Camera IPC-HDW3849H-AS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdw3849h-as-pv-pro"
+            },
+            {
+              "model": "IPC-HDW3849H-ZAS-PV-PRO",
+              "name": "8MP WizColor TiOC PRO Vari-focal Eyeball WizSense Network Camera IPC-HDW3849H-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hdw3849h-zas-pv-pro"
+            },
+            {
+              "model": "IPC-HFW3449T1-AS-PV-PRO",
+              "name": "4MP WizColor TiOC PRO Fixed-focal Bullet WizSense Network Camera IPC-HFW3449T1-AS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hfw3449t1-as-pv-pro"
+            },
+            {
+              "model": "IPC-HFW3449T1-ZAS-PV-PRO",
+              "name": "4MP WizColor TiOC PRO Vari-focal Bullet WizSense Network Camera IPC-HFW3449T1-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hfw3449t1-zas-pv-pro"
+            },
+            {
+              "model": "IPC-HFW3649T1-AS-PV-PRO",
+              "name": "6MP WizColor TiOC PRO Fixed-focal Bullet WizSense Network Camera IPC-HFW3649T1-AS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hfw3649t1-as-pv-pro"
+            },
+            {
+              "model": "IPC-HFW3649T1-ZAS-PV-PRO",
+              "name": "6MP WizColor TiOC PRO Vari-focal Bullet WizSense Network Camera IPC-HFW3649T1-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hfw3649t1-zas-pv-pro"
+            },
+            {
+              "model": "IPC-HFW3849T1-AS-PV-PRO",
+              "name": "8MP WizColor TiOC PRO Fixed-focal Bullet WizSense Network Camera IPC-HFW3849T1-AS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hfw3849t1-as-pv-pro"
+            },
+            {
+              "model": "IPC-HFW3849T1-ZAS-PV-PRO",
+              "name": "8MP WizColor TiOC PRO Vari-focal Bullet WizSense Network Camera IPC-HFW3849T1-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc-pro-wizcolor/ipc-hfw3849t1-zas-pv-pro"
+            }
+          ]
+        },
+        "Smart Dual Light": {
+          "series_l1": "WizSense 3",
+          "subseries": "Smart Dual Light",
+          "models_count": 44,
+          "models": [
+            {
+              "model": "IPC-HDBW3249E-AS-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3249E-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3249e-as-il"
+            },
+            {
+              "model": "IPC-HDBW3249E-S-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3249E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3249e-s-il"
+            },
+            {
+              "model": "IPC-HDBW3249F-AS-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3249F-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3249f-as-il"
+            },
+            {
+              "model": "IPC-HDBW3249R-ZAS-IL",
+              "name": "2MP Smart Dual Light Vari-focal Dome WizSense Network Camera IPC-HDBW3249R-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3249r-zas-il"
+            },
+            {
+              "model": "IPC-HDBW3249R-ZS-IL",
+              "name": "2MP Smart Dual Light Vari-focal Dome WizSense Network Camera IPC-HDBW3249R-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3249r-zs-il"
+            },
+            {
+              "model": "IPC-HDBW3449E-AS-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3449E-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3449e-as-il"
+            },
+            {
+              "model": "IPC-HDBW3449E-S-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3449E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3449e-s-il"
+            },
+            {
+              "model": "IPC-HDBW3449F-AS-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3449F-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3449f-as-il"
+            },
+            {
+              "model": "IPC-HDBW3449R-ZAS-IL",
+              "name": "4MP Smart Dual Light Vari-focal Dome WizSense Network Camera IPC-HDBW3449R-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3449r-zas-il"
+            },
+            {
+              "model": "IPC-HDBW3449R-ZS-IL",
+              "name": "4MP Smart Dual Light Vari-focal Dome WizSense Network Camera IPC-HDBW3449R-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3449r-zs-il"
+            },
+            {
+              "model": "IPC-HDBW3649E-AS-IL",
+              "name": "6MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3649E-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3649e-as-il"
+            },
+            {
+              "model": "IPC-HDBW3649E-S-IL",
+              "name": "6MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3649E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3649e-s-il"
+            },
+            {
+              "model": "IPC-HDBW3649F-AS-IL",
+              "name": "6MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3649F-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3649f-as-il"
+            },
+            {
+              "model": "IPC-HDBW3649R-ZAS-IL",
+              "name": "6MP Smart Dual Light Vari-focal Dome WizSense Network Camera IPC-HDBW3649R-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3649r-zas-il"
+            },
+            {
+              "model": "IPC-HDBW3649R-ZS-IL",
+              "name": "6MP Smart Dual Light Vari-focal Dome WizSense Network Camera IPC-HDBW3649R-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3649r-zs-il"
+            },
+            {
+              "model": "IPC-HDBW3849E-AS-IL",
+              "name": "8MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3849E-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3849e-as-il"
+            },
+            {
+              "model": "IPC-HDBW3849E-S-IL",
+              "name": "8MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3849E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3849e-s-il"
+            },
+            {
+              "model": "IPC-HDBW3849F-AS-IL",
+              "name": "8MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3849F-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3849f-as-il"
+            },
+            {
+              "model": "IPC-HDBW3849R-ZAS-IL",
+              "name": "8MP Smart Dual Light Vari-focal Dome WizSense Network Camera IPC-HDBW3849R-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3849r-zas-il"
+            },
+            {
+              "model": "IPC-HDBW3849R-ZS-IL",
+              "name": "8MP Smart Dual Light Vari-focal Dome WizSense Network Camera IPC-HDBW3849R-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3849r-zs-il"
+            },
+            {
+              "model": "IPC-HDW3249QM-S-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW3249QM-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdw3249qm-s-il"
+            },
+            {
+              "model": "IPC-HDW3249T-ZS-IL",
+              "name": "2MP Smart Dual Light Vari-focal Eyeball WizSense Network Camera IPC-HDW3249T-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdw3249t-zs-il"
+            },
+            {
+              "model": "IPC-HDW3449QM-S-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW3449QM-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdw3449qm-s-il"
+            },
+            {
+              "model": "IPC-HDW3449T-ZS-IL",
+              "name": "4MP Smart Dual Light Vari-focal Eyeball WizSense Network Camera IPC-HDW3449T-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdw3449t-zs-il"
+            },
+            {
+              "model": "IPC-HDW3649QM-S-IL",
+              "name": "6MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW3649QM-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdw3649qm-s-il"
+            },
+            {
+              "model": "IPC-HDW3649T-ZS-IL",
+              "name": "6MP Smart Dual Light Vari-focal Eyeball WizSense Network Camera IPC-HDW3649T-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdw3649t-zs-il"
+            },
+            {
+              "model": "IPC-HDW3849QM-S-IL",
+              "name": "8MP Smart Dual Light Fixed-focal Eyeball WizSense Network Camera IPC-HDW3849QM-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdw3849qm-s-il"
+            },
+            {
+              "model": "IPC-HDW3849T-ZS-IL",
+              "name": "8MP Smart Dual Light Vari-focal Eyeball WizSense Network Camera IPC-HDW3849T-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdw3849t-zs-il"
+            },
+            {
+              "model": "IPC-HFW3249E-AS-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW3249E-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hfw3249e-as-il"
+            },
+            {
+              "model": "IPC-HFW3249E-S-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW3249E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hfw3249e-s-il"
+            },
+            {
+              "model": "IPC-HFW3249T-ZAS-IL",
+              "name": "2MP Smart Dual Light Vari-focal Bullet WizSense Network Camera IPC-HFW3249T-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hfw3249t-zas-il"
+            },
+            {
+              "model": "IPC-HFW3249T-ZS-IL",
+              "name": "2MP Smart Dual Light Vari-focal Bullet WizSense Network Camera IPC-HFW3249T-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hfw3249t-zs-il"
+            },
+            {
+              "model": "IPC-HFW3449E-AS-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW3449E-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hfw3449e-as-il"
+            },
+            {
+              "model": "IPC-HFW3449E-S-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW3449E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hfw3449e-s-il"
+            },
+            {
+              "model": "IPC-HFW3449T-ZAS-IL",
+              "name": "4MP Smart Dual Light Vari-focal Bullet WizSense Network Camera IPC-HFW3449T-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hfw3449t-zas-il"
+            },
+            {
+              "model": "IPC-HFW3449T-ZS-IL",
+              "name": "4MP Smart Dual Light Vari-focal Bullet WizSense Network Camera IPC-HFW3449T-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hfw3449t-zs-il"
+            },
+            {
+              "model": "IPC-HFW3649E-AS-IL",
+              "name": "6MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW3649E-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hfw3649e-as-il"
+            },
+            {
+              "model": "IPC-HFW3649E-S-IL",
+              "name": "6MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW3649E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hfw3649e-s-il"
+            },
+            {
+              "model": "IPC-HFW3649T-ZAS-IL",
+              "name": "6MP Smart Dual Light Vari-focal Bullet WizSense Network Camera IPC-HFW3649T-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hfw3649t-zas-il"
+            },
+            {
+              "model": "IPC-HFW3649T-ZS-IL",
+              "name": "6MP Smart Dual Light Vari-focal Bullet WizSense Network Camera IPC-HFW3649T-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hfw3649t-zs-il"
+            },
+            {
+              "model": "IPC-HFW3849E-AS-IL",
+              "name": "8MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW3849E-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hfw3849e-as-il"
+            },
+            {
+              "model": "IPC-HFW3849E-S-IL",
+              "name": "8MP Smart Dual Light Fixed-focal Bullet WizSense Network Camera IPC-HFW3849E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hfw3849e-s-il"
+            },
+            {
+              "model": "IPC-HFW3849T-ZAS-IL",
+              "name": "8MP Smart Dual Light Vari-focal Bullet WizSense Network Camera IPC-HFW3849T-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hfw3849t-zas-il"
+            },
+            {
+              "model": "IPC-HFW3849T-ZS-IL",
+              "name": "8MP Smart Dual Light Vari-focal Bullet WizSense Network Camera IPC-HFW3849T-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hfw3849t-zs-il"
+            }
+          ],
+          "sample_models": [
+            {
+              "model": "IPC-HDBW3249E-AS-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3249E-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3249e-as-il"
+            },
+            {
+              "model": "IPC-HDBW3249E-S-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3249E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3249e-s-il"
+            },
+            {
+              "model": "IPC-HDBW3249F-AS-IL",
+              "name": "2MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3249F-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3249f-as-il"
+            },
+            {
+              "model": "IPC-HDBW3249R-ZAS-IL",
+              "name": "2MP Smart Dual Light Vari-focal Dome WizSense Network Camera IPC-HDBW3249R-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3249r-zas-il"
+            },
+            {
+              "model": "IPC-HDBW3249R-ZS-IL",
+              "name": "2MP Smart Dual Light Vari-focal Dome WizSense Network Camera IPC-HDBW3249R-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3249r-zs-il"
+            },
+            {
+              "model": "IPC-HDBW3449E-AS-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3449E-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3449e-as-il"
+            },
+            {
+              "model": "IPC-HDBW3449E-S-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3449E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3449e-s-il"
+            },
+            {
+              "model": "IPC-HDBW3449F-AS-IL",
+              "name": "4MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3449F-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3449f-as-il"
+            },
+            {
+              "model": "IPC-HDBW3449R-ZAS-IL",
+              "name": "4MP Smart Dual Light Vari-focal Dome WizSense Network Camera IPC-HDBW3449R-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3449r-zas-il"
+            },
+            {
+              "model": "IPC-HDBW3449R-ZS-IL",
+              "name": "4MP Smart Dual Light Vari-focal Dome WizSense Network Camera IPC-HDBW3449R-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3449r-zs-il"
+            },
+            {
+              "model": "IPC-HDBW3649E-AS-IL",
+              "name": "6MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3649E-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3649e-as-il"
+            },
+            {
+              "model": "IPC-HDBW3649E-S-IL",
+              "name": "6MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3649E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3649e-s-il"
+            },
+            {
+              "model": "IPC-HDBW3649F-AS-IL",
+              "name": "6MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3649F-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3649f-as-il"
+            },
+            {
+              "model": "IPC-HDBW3649R-ZAS-IL",
+              "name": "6MP Smart Dual Light Vari-focal Dome WizSense Network Camera IPC-HDBW3649R-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3649r-zas-il"
+            },
+            {
+              "model": "IPC-HDBW3649R-ZS-IL",
+              "name": "6MP Smart Dual Light Vari-focal Dome WizSense Network Camera IPC-HDBW3649R-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3649r-zs-il"
+            },
+            {
+              "model": "IPC-HDBW3849E-AS-IL",
+              "name": "8MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3849E-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3849e-as-il"
+            },
+            {
+              "model": "IPC-HDBW3849E-S-IL",
+              "name": "8MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3849E-S-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3849e-s-il"
+            },
+            {
+              "model": "IPC-HDBW3849F-AS-IL",
+              "name": "8MP Smart Dual Light Fixed-focal Dome WizSense Network Camera IPC-HDBW3849F-AS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3849f-as-il"
+            },
+            {
+              "model": "IPC-HDBW3849R-ZAS-IL",
+              "name": "8MP Smart Dual Light Vari-focal Dome WizSense Network Camera IPC-HDBW3849R-ZAS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3849r-zas-il"
+            },
+            {
+              "model": "IPC-HDBW3849R-ZS-IL",
+              "name": "8MP Smart Dual Light Vari-focal Dome WizSense Network Camera IPC-HDBW3849R-ZS-IL Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/smart-dual-light/ipc-hdbw3849r-zs-il"
+            }
+          ]
+        },
+        "TiOC": {
+          "series_l1": "WizSense 3",
+          "subseries": "TiOC",
+          "models_count": 6,
+          "models": [
+            {
+              "model": "IPC-PDW31259-A180-AS-PV",
+              "name": "2x6MP TiOC Duo Splicing Fixed-focal Eyeball WizSense Network Camera IPC-PDW31259-A180-AS-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc/ipc-pdw31259-a180-as-pv"
+            },
+            {
+              "model": "IPC-PDW3849-A180-AS-PV",
+              "name": "2x4MP TiOC Duo Splicing Fixed-focal Eyeball WizSense Network Camera IPC-PDW3849-A180-AS-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc/ipc-pdw3849-a180-as-pv"
+            },
+            {
+              "model": "IPC-PDW3859-A180-AS-PV",
+              "name": "2x4MP TiOC Duo Splicing Fixed-focal Eyeball WizSense Network Camera IPC-PDW3859-A180-AS-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc/ipc-pdw3859-a180-as-pv"
+            },
+            {
+              "model": "IPC-PFW31259S-A180-AS-PV=S2",
+              "name": "2x6MP TiOC Duo Splicing Fixed-focal Bullet WizSense Network Camera IPC-PFW31259S-A180-AS-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc/ipc-pfw31259s-a180-as-pv=s2"
+            },
+            {
+              "model": "IPC-PFW3849S-A180-AS-PV",
+              "name": "2x4MP TiOC Duo Splicing Fixed-focal Bullet WizSense Network Camera IPC-PFW3849S-A180-AS-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc/ipc-pfw3849s-a180-as-pv"
+            },
+            {
+              "model": "IPC-PFW3859S-A180-AS-PV=S2",
+              "name": "2x4MP TiOC Duo Splicing Fixed-focal Bullet WizSense Network Camera IPC-PFW3859S-A180-AS-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc/ipc-pfw3859s-a180-as-pv=s2"
+            }
+          ],
+          "sample_models": [
+            {
+              "model": "IPC-PDW31259-A180-AS-PV",
+              "name": "2x6MP TiOC Duo Splicing Fixed-focal Eyeball WizSense Network Camera IPC-PDW31259-A180-AS-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc/ipc-pdw31259-a180-as-pv"
+            },
+            {
+              "model": "IPC-PDW3849-A180-AS-PV",
+              "name": "2x4MP TiOC Duo Splicing Fixed-focal Eyeball WizSense Network Camera IPC-PDW3849-A180-AS-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc/ipc-pdw3849-a180-as-pv"
+            },
+            {
+              "model": "IPC-PDW3859-A180-AS-PV",
+              "name": "2x4MP TiOC Duo Splicing Fixed-focal Eyeball WizSense Network Camera IPC-PDW3859-A180-AS-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc/ipc-pdw3859-a180-as-pv"
+            },
+            {
+              "model": "IPC-PFW31259S-A180-AS-PV=S2",
+              "name": "2x6MP TiOC Duo Splicing Fixed-focal Bullet WizSense Network Camera IPC-PFW31259S-A180-AS-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc/ipc-pfw31259s-a180-as-pv=s2"
+            },
+            {
+              "model": "IPC-PFW3849S-A180-AS-PV",
+              "name": "2x4MP TiOC Duo Splicing Fixed-focal Bullet WizSense Network Camera IPC-PFW3849S-A180-AS-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc/ipc-pfw3849s-a180-as-pv"
+            },
+            {
+              "model": "IPC-PFW3859S-A180-AS-PV=S2",
+              "name": "2x4MP TiOC Duo Splicing Fixed-focal Bullet WizSense Network Camera IPC-PFW3859S-A180-AS-PV Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/tioc/ipc-pfw3859s-a180-as-pv=s2"
+            }
+          ]
+        },
+        "IR": {
+          "series_l1": "WizSense 3",
+          "subseries": "IR",
+          "models_count": 2,
+          "models": [
+            {
+              "model": "IPC-HDBW3441R-AS-P",
+              "name": "4MP Wide Angle Fixed Dome WizSense Network Camera IPC-HDBW3441R-AS-P Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/ir/ipc-hdbw3441r-as-p"
+            },
+            {
+              "model": "IPC-HFW3441T-AS-P",
+              "name": "4MP Wide Angle Fixed Bullet WizSense Network Camera IPC-HFW3441T-AS-P Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/ir/ipc-hfw3441t-as-p"
+            }
+          ],
+          "sample_models": [
+            {
+              "model": "IPC-HDBW3441R-AS-P",
+              "name": "4MP Wide Angle Fixed Dome WizSense Network Camera IPC-HDBW3441R-AS-P Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/ir/ipc-hdbw3441r-as-p"
+            },
+            {
+              "model": "IPC-HFW3441T-AS-P",
+              "name": "4MP Wide Angle Fixed Bullet WizSense Network Camera IPC-HFW3441T-AS-P Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/ir/ipc-hfw3441t-as-p"
+            }
+          ]
+        },
+        "Anti-Corrosion": {
+          "series_l1": "WizSense 3",
+          "subseries": "Anti-Corrosion",
+          "models_count": 19,
+          "models": [
+            {
+              "model": "IPC-HDBW3449R1-ZAS-PV-PRO-ATC",
+              "name": "4MP WizColor TiOC PRO Vari-focal Anti-corrosion Dome WizSense Network Camera IPC-HDBW3449R1-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdbw3449r1-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HDBW3649R1-ZAS-PV-PRO-ATC",
+              "name": "6MP WizColor TiOC PRO Vari-focal Anti-corrosion Dome WizSense Network Camera IPC-HDBW3649R1-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdbw3649r1-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HDBW3849R1-ZAS-PV-PRO-ATC",
+              "name": "8MP WizColor TiOC PRO Vari-focal Anti-corrosion Dome WizSense Network Camera IPC-HDBW3849R1-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdbw3849r1-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HDW3449H-AS-PV-PRO-ATC",
+              "name": "4MP WizColor TiOC PRO Fixed-focal Anti-corrosion Dome WizSense Network Camera IPC-HDW3449H-AS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdw3449h-as-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HDW3449H-ZAS-PV-PRO-ATC",
+              "name": "4MP WizColor TiOC PRO Vari-focal Anti-corrosion Dome WizSense Network Camera IPC-HDW3449H-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdw3449h-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HDW3649H-AS-PV-PRO-ATC",
+              "name": "6MP WizColor TiOC PRO Fixed-focal Anti-corrosion Dome WizSense Network Camera IPC-HDW3649H-AS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdw3649h-as-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HDW3649H-ZAS-PV-PRO-ATC",
+              "name": "6MP WizColor TiOC PRO Vari-focal Anti-corrosion Dome WizSense Network Camera IPC-HDW3649H-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdw3649h-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HDW3849H-AS-PV-PRO-ATC",
+              "name": "8MP WizColor TiOC PRO Fixed-focal Anti-corrosion Dome WizSense Network Camera IPC-HDW3849H-AS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdw3849h-as-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HDW3849H-ZAS-PV-PRO-ATC",
+              "name": "8MP WizColor TiOC PRO Vari-focal Anti-corrosion Dome WizSense Network Camera IPC-HDW3849H-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdw3849h-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HFW3449T1-AS-PV-PRO-ATC",
+              "name": "4MP WizColor TiOC PRO Fixed-focal Anti-corrosion Bullet WizSense Network Camera IPC-HFW3449T1-AS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hfw3449t1-as-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HFW3449T1-ZAS-PV-PRO-ATC",
+              "name": "4MP WizColor TiOC PRO Vari-focal Anti-corrosion Bullet WizSense Network Camera IPC-HFW3449T1-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hfw3449t1-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HFW3649T1-AS-PV-PRO-ATC",
+              "name": "6MP WizColor TiOC PRO Fixed-focal Anti-corrosion Bullet WizSense Network Camera IPC-HFW3649T1-AS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hfw3649t1-as-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HFW3649T1-ZAS-PV-PRO-ATC",
+              "name": "6MP WizColor TiOC PRO Vari-focal Anti-corrosion Bullet WizSense Network Camera IPC-HFW3649T1-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hfw3649t1-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HFW3849T1-AS-PV-PRO-ATC",
+              "name": "8MP WizColor TiOC PRO Fixed-focal Anti-corrosion Bullet WizSense Network Camera IPC-HFW3849T1-AS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hfw3849t1-as-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HFW3849T1-ZAS-PV-PRO-ATC",
+              "name": "8MP WizColor TiOC PRO Vari-focal Anti-corrosion Bullet WizSense Network Camera IPC-HFW3849T1-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hfw3849t1-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-PDW31259-A180-AS-PV-ATC",
+              "name": "2x6MP TiOC Duo Splicing Fixed-focal Anti-corrosion Eyeball WizSense Network Camera IPC-PDW31259-A180-AS-PV-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-pdw31259-a180-as-pv-atc"
+            },
+            {
+              "model": "IPC-PDW3859-A180-AS-PV-ATC",
+              "name": "2x4MP TiOC Duo Splicing Fixed-focal Anti-corrosion Eyeball WizSense Network Camera IPC-PDW3859-A180-AS-PV-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-pdw3859-a180-as-pv-atc"
+            },
+            {
+              "model": "IPC-PFW31259S-A180-AS-PV-ATC",
+              "name": "2x6MP TiOC Duo Splicing Fixed-focal Anti-corrosion Bullet WizSense Network Camera IPC-PFW31259S-A180-AS-PV-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-pfw31259s-a180-as-pv-atc"
+            },
+            {
+              "model": "IPC-PFW3859S-A180-AS-PV-ATC",
+              "name": "2x4MP TiOC Duo Splicing Fixed-focal Anti-corrosion Bullet WizSense Network Camera IPC-PFW3859S-A180-AS-PV-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-pfw3859s-a180-as-pv-atc"
+            }
+          ],
+          "sample_models": [
+            {
+              "model": "IPC-HDBW3449R1-ZAS-PV-PRO-ATC",
+              "name": "4MP WizColor TiOC PRO Vari-focal Anti-corrosion Dome WizSense Network Camera IPC-HDBW3449R1-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdbw3449r1-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HDBW3649R1-ZAS-PV-PRO-ATC",
+              "name": "6MP WizColor TiOC PRO Vari-focal Anti-corrosion Dome WizSense Network Camera IPC-HDBW3649R1-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdbw3649r1-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HDBW3849R1-ZAS-PV-PRO-ATC",
+              "name": "8MP WizColor TiOC PRO Vari-focal Anti-corrosion Dome WizSense Network Camera IPC-HDBW3849R1-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdbw3849r1-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HDW3449H-AS-PV-PRO-ATC",
+              "name": "4MP WizColor TiOC PRO Fixed-focal Anti-corrosion Dome WizSense Network Camera IPC-HDW3449H-AS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdw3449h-as-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HDW3449H-ZAS-PV-PRO-ATC",
+              "name": "4MP WizColor TiOC PRO Vari-focal Anti-corrosion Dome WizSense Network Camera IPC-HDW3449H-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdw3449h-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HDW3649H-AS-PV-PRO-ATC",
+              "name": "6MP WizColor TiOC PRO Fixed-focal Anti-corrosion Dome WizSense Network Camera IPC-HDW3649H-AS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdw3649h-as-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HDW3649H-ZAS-PV-PRO-ATC",
+              "name": "6MP WizColor TiOC PRO Vari-focal Anti-corrosion Dome WizSense Network Camera IPC-HDW3649H-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdw3649h-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HDW3849H-AS-PV-PRO-ATC",
+              "name": "8MP WizColor TiOC PRO Fixed-focal Anti-corrosion Dome WizSense Network Camera IPC-HDW3849H-AS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdw3849h-as-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HDW3849H-ZAS-PV-PRO-ATC",
+              "name": "8MP WizColor TiOC PRO Vari-focal Anti-corrosion Dome WizSense Network Camera IPC-HDW3849H-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hdw3849h-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HFW3449T1-AS-PV-PRO-ATC",
+              "name": "4MP WizColor TiOC PRO Fixed-focal Anti-corrosion Bullet WizSense Network Camera IPC-HFW3449T1-AS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hfw3449t1-as-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HFW3449T1-ZAS-PV-PRO-ATC",
+              "name": "4MP WizColor TiOC PRO Vari-focal Anti-corrosion Bullet WizSense Network Camera IPC-HFW3449T1-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hfw3449t1-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HFW3649T1-AS-PV-PRO-ATC",
+              "name": "6MP WizColor TiOC PRO Fixed-focal Anti-corrosion Bullet WizSense Network Camera IPC-HFW3649T1-AS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hfw3649t1-as-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HFW3649T1-ZAS-PV-PRO-ATC",
+              "name": "6MP WizColor TiOC PRO Vari-focal Anti-corrosion Bullet WizSense Network Camera IPC-HFW3649T1-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hfw3649t1-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HFW3849T1-AS-PV-PRO-ATC",
+              "name": "8MP WizColor TiOC PRO Fixed-focal Anti-corrosion Bullet WizSense Network Camera IPC-HFW3849T1-AS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hfw3849t1-as-pv-pro-atc"
+            },
+            {
+              "model": "IPC-HFW3849T1-ZAS-PV-PRO-ATC",
+              "name": "8MP WizColor TiOC PRO Vari-focal Anti-corrosion Bullet WizSense Network Camera IPC-HFW3849T1-ZAS-PV-PRO-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-hfw3849t1-zas-pv-pro-atc"
+            },
+            {
+              "model": "IPC-PDW31259-A180-AS-PV-ATC",
+              "name": "2x6MP TiOC Duo Splicing Fixed-focal Anti-corrosion Eyeball WizSense Network Camera IPC-PDW31259-A180-AS-PV-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-pdw31259-a180-as-pv-atc"
+            },
+            {
+              "model": "IPC-PDW3859-A180-AS-PV-ATC",
+              "name": "2x4MP TiOC Duo Splicing Fixed-focal Anti-corrosion Eyeball WizSense Network Camera IPC-PDW3859-A180-AS-PV-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-pdw3859-a180-as-pv-atc"
+            },
+            {
+              "model": "IPC-PFW31259S-A180-AS-PV-ATC",
+              "name": "2x6MP TiOC Duo Splicing Fixed-focal Anti-corrosion Bullet WizSense Network Camera IPC-PFW31259S-A180-AS-PV-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-pfw31259s-a180-as-pv-atc"
+            },
+            {
+              "model": "IPC-PFW3859S-A180-AS-PV-ATC",
+              "name": "2x4MP TiOC Duo Splicing Fixed-focal Anti-corrosion Bullet WizSense Network Camera IPC-PFW3859S-A180-AS-PV-ATC Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/anti-corrosion/ipc-pfw3859s-a180-as-pv-atc"
+            }
+          ]
+        },
+        "4G Camera": {
+          "series_l1": "WizSense 3",
+          "subseries": "4G Camera",
+          "models_count": 4,
+          "models": [
+            {
+              "model": "IPC-HDBW3441DR1-AST-4G-EAU",
+              "name": "4MP IR fixed focal Dome WizSense 4G Network Camera IPC-HDBW3441DR1-AST-4G-EAU Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/4g-camera/ipc-hdbw3441dr1-ast-4g-eau"
+            },
+            {
+              "model": "IPC-HDBW3441DR1-AST-4G-LA",
+              "name": "4MP IR fixed focal Dome WizSense 4G Network Camera IPC-HDBW3441DR1-AST-4G-LA Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/4g-camera/ipc-hdbw3441dr1-ast-4g-la"
+            },
+            {
+              "model": "IPC-HFW3441DG-AS-4G-EAU-B",
+              "name": "4MP IR Fixed-focal Bullet WizSense 4G Network Camera IPC-HFW3441DG-AS-4G-EAU-B Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/4g-camera/ipc-hfw3441dg-as-4g-eau-b"
+            },
+            {
+              "model": "IPC-HFW3441DG-AS-4G-LA-B",
+              "name": "4MP IR Fixed-focal Bullet WizSense 4G Network Camera IPC-HFW3441DG-AS-4G-LA-B Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/4g-camera/ipc-hfw3441dg-as-4g-la-b"
+            }
+          ],
+          "sample_models": [
+            {
+              "model": "IPC-HDBW3441DR1-AST-4G-EAU",
+              "name": "4MP IR fixed focal Dome WizSense 4G Network Camera IPC-HDBW3441DR1-AST-4G-EAU Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/4g-camera/ipc-hdbw3441dr1-ast-4g-eau"
+            },
+            {
+              "model": "IPC-HDBW3441DR1-AST-4G-LA",
+              "name": "4MP IR fixed focal Dome WizSense 4G Network Camera IPC-HDBW3441DR1-AST-4G-LA Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/4g-camera/ipc-hdbw3441dr1-ast-4g-la"
+            },
+            {
+              "model": "IPC-HFW3441DG-AS-4G-EAU-B",
+              "name": "4MP IR Fixed-focal Bullet WizSense 4G Network Camera IPC-HFW3441DG-AS-4G-EAU-B Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/4g-camera/ipc-hfw3441dg-as-4g-eau-b"
+            },
+            {
+              "model": "IPC-HFW3441DG-AS-4G-LA-B",
+              "name": "4MP IR Fixed-focal Bullet WizSense 4G Network Camera IPC-HFW3441DG-AS-4G-LA-B Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/4g-camera/ipc-hfw3441dg-as-4g-la-b"
+            }
+          ]
+        },
+        "WizSense Camera": {
+          "series_l1": "WizSense 3",
+          "subseries": "WizSense Camera",
+          "models_count": 1,
+          "models": [
+            {
+              "model": "IPC-HFW3849T1-ZAS-PV-PRO",
+              "name": "8MP WizColor TiOC PRO Vari-focal Bullet WizSense Network Camera IPC-HFW3849T1-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/wizsense-camera/ipc-hfw3849t1-zas-pv-pro"
+            }
+          ],
+          "sample_models": [
+            {
+              "model": "IPC-HFW3849T1-ZAS-PV-PRO",
+              "name": "8MP WizColor TiOC PRO Vari-focal Bullet WizSense Network Camera IPC-HFW3849T1-ZAS-PV-PRO Compare Favourite",
+              "url": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series/wizsense-camera/ipc-hfw3849t1-zas-pv-pro"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
