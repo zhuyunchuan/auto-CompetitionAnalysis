@@ -2,6 +2,11 @@
 
 基于技术方案文档 v0.2 和整体技术设计 v0.2 拆分的开发任务。
 
+## 最新增量开发计划（DEV_PLAN v0.1）
+
+- 扩展系列覆盖 + 产品图片 `image_url` 贯通任务拆分： [TASKS_DEV_PLAN_v0.1.md](file:///workspace/docs/TASKS_DEV_PLAN_v0.1.md)
+- 原始计划文档： [DEV_PLAN_v0.1_扩展系列与产品图片.md](file:///workspace/docs/DEV_PLAN_v0.1_扩展系列与产品图片.md)
+
 ## 任务拆分概览
 
 ### 并行开发策略（9个Agent）

@@ -1,0 +1,42 @@
+[
+  {
+    "brand": "hikvision",
+    "series_l1": "Pro",
+    "subseries": "EasyIP 4.0 Series ColorVu",
+    "model": "LEAFLET-PREVIEW-FILE_-NETWORK-CAMERAS-WITH-COLORVU3.0_20240910.PDF",
+    "name": "Network Cameras with ColorVu 3.0",
+    "url": "https://www.hikvision.com/content/dam/hikvision/en/marketing/image/products/ip-products/easy-ip-4-0/leaflet-Preview-File_-Network-Cameras-with-ColorVu3.0_20240910.pdf"
+  },
+  {
+    "brand": "hikvision",
+    "series_l1": "Pro",
+    "subseries": "EasyIP 4.0 Series ColorVu",
+    "model": "POSTER-PREVIEW-FILE_-NETWORK-CAMERAS-WITH-COLORVU3.0_20240910.JPG",
+    "name": "Network Cameras with ColorVu 3.0",
+    "url": "https://www.hikvision.com/content/dam/hikvision/en/marketing/image/products/ip-products/easy-ip-4-0/Poster-Preview-File_-Network-Cameras-with-ColorVu3.0_20240910.jpg"
+  },
+  {
+    "brand": "hikvision",
+    "series_l1": "Pro",
+    "subseries": "EasyIP 4.0 Series ColorVu",
+    "model": "POSTER-SOURCE-FILE_EASYIP-4.0-PLUS-4-TECHNOLOGIES-ACUSENSE.JPG",
+    "name": "AcuSense 3.0 Technology Poster",
+    "url": "https://www.hikvision.com/content/dam/hikvision/en/marketing/image/products/ip-products/easy-ip-4-0/Poster-Source-File_EasyIP-4.0-Plus-4-Technologies-AcuSense.jpg"
+  },
+  {
+    "brand": "hikvision",
+    "series_l1": "Pro",
+    "subseries": "EasyIP 4.0 Series ColorVu",
+    "model": "POSTER-SOURCE-FILE_EASYIP-4.0-PLUS-4-TECHNOLOGIES-AUDIO.JPG",
+    "name": "Audio 2.0 Technology Poster",
+    "url": "https://www.hikvision.com/content/dam/hikvision/en/marketing/image/products/ip-products/easy-ip-4-0/Poster-Source-File_EasyIP-4.0-Plus-4-Technologies-Audio.jpg"
+  },
+  {
+    "brand": "hikvision",
+    "series_l1": "Pro",
+    "subseries": "EasyIP 4.0 Series ColorVu",
+    "model": "POSTER-SOURCE-FILE_EASYIP-4.0-PLUS-4-TECHNOLOGIES-COLORVU.JPG",
+    "name": "ColorVu 3.0 Technology Poster",
+    "url": "https://www.hikvision.com/content/dam/hikvision/en/marketing/image/products/ip-products/easy-ip-4-0/Poster-Source-File_EasyIP-4.0-Plus-4-Technologies-ColorVu.jpg"
+  }
+]

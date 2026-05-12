@@ -1,0 +1,45 @@
+{
+  "out_dir": "/workspace/results/hikvision_specs_all_20260511_123532",
+  "total_models": 699,
+  "specs_ok_models": 696,
+  "unavailable_models": [
+    {
+      "brand": "hikvision",
+      "series_l1": "Value",
+      "subseries": "Value Series",
+      "model": "DS-2CD1643G2-LIZ-S-U-SL",
+      "name": "DS-2CD1643G2-LIZ(S)U/SL 4 MP Dual Light MD 2.0 Varifocal Bullet Network Camera",
+      "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1643g2-liz-s-u-sl/",
+      "final_url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/?category=Network+Products&subCategory=Network+Cameras&series=Value+Series&checkedSubSeries=NONE",
+      "canonical": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/",
+      "reason": "redirected_to_series_list"
+    },
+    {
+      "brand": "hikvision",
+      "series_l1": "Value",
+      "subseries": "Value Series",
+      "model": "DS-2CD1763G2-LIZ-S-U",
+      "name": "DS-2CD1763G2-LIZ(S)U 6 MP Dual Light MD 2.0 Varifocal Dome Network Camera",
+      "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1763g2-liz-s-u/",
+      "final_url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/?category=Network+Products&subCategory=Network+Cameras&series=Value+Series&checkedSubSeries=NONE",
+      "canonical": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/",
+      "reason": "redirected_to_series_list"
+    },
+    {
+      "brand": "hikvision",
+      "series_l1": "Value",
+      "subseries": "Value Series",
+      "model": "DS-2CD1T43G2-LIU-SL-BRAZIL",
+      "name": "DS-2CD1T43G2-LIU/SL#Brazil 4 MP Smart Hybrid Light Fixed Bullet Network Camera",
+      "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1t43g2-liu-sl-brazil/",
+      "final_url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1t43g2-liu-sl-brazil/",
+      "canonical": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1t43g2-liu-sl-brazil/",
+      "reason": "specs_empty"
+    }
+  ],
+  "generated_at": "2026-05-11T13:31:43.059Z",
+  "notes": [
+    "已对初次抓取的 zero/error 模型做二次重试；可抓取的已补齐并追加到 specs_long.csv/jsonl。",
+    "unavailable_models 中记录了官网重定向到系列列表或页面无规格信息的型号。"
+  ]
+}

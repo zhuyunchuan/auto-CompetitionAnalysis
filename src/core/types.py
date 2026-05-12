@@ -29,6 +29,7 @@ class CatalogItem:
     name: str
     url: str
     locale: str = "en"
+    image_url: Optional[str] = None
 
 @dataclass(frozen=True)
 class SpecRecord:

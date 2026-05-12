@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-05-11T13:02:10.904Z",
+  "brand": "dahua",
+  "entry": {
+    "wizsense2": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series",
+    "wizsense3": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series"
+  },
+  "series": {
+    "WizSense 2": {
+      "series_l1": "WizSense 2",
+      "series_l1_raw": "WizSense 2 Series",
+      "series_page": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-2-series",
+      "discovered_tabs": [
+        "default"
+      ],
+      "subseries": {}
+    },
+    "WizSense 3": {
+      "series_l1": "WizSense 3",
+      "series_l1_raw": "WizSense 3 Series",
+      "series_page": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizsense-3-series",
+      "discovered_tabs": [
+        "default"
+      ],
+      "subseries": {
+        "default": {
+          "series_l1": "WizSense 3",
+          "subseries": "default",
+          "models_count": 0,
+          "models": [],
+          "sample_models": []
+        }
+      }
+    }
+  }
+}

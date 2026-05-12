@@ -6,11 +6,15 @@ These tests verify end-to-end functionality across multiple modules.
 
 import pytest
 from datetime import datetime
+import os
 
 from src.pipeline import run_manual_pipeline
 from src.storage.db import get_session
 from src.storage.schema import RunSummary, ProductCatalog, ProductSpecLong
 from src.core.constants import Brand, ScheduleType
+
+if os.getenv("RUN_INTEGRATION") != "1":
+    pytest.skip("integration tests disabled", allow_module_level=True)
 
 
 @pytest.mark.integration

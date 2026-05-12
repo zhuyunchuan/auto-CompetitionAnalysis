@@ -10,7 +10,7 @@ from contextlib import contextmanager
 from pathlib import Path
 from typing import Generator, Optional
 
-from sqlalchemy import create_engine, Engine
+from sqlalchemy import create_engine, Engine, text
 from sqlalchemy.orm import sessionmaker, Session, scoped_session
 from sqlalchemy.pool import StaticPool
 
@@ -108,6 +108,7 @@ class Database:
 
         try:
             Base.metadata.create_all(self.engine)
+            self._ensure_schema_compat()
             logger.info("Database schema initialized successfully")
         except Exception as e:
             logger.error(
@@ -116,6 +117,16 @@ class Database:
                 exc_info=True
             )
             raise
+
+    def _ensure_schema_compat(self) -> None:
+        with self.engine.begin() as conn:
+            columns = conn.execute(text("PRAGMA table_info(product_catalog)")).fetchall()
+            if not columns:
+                return
+
+            existing = {row[1] for row in columns}
+            if "image_url" not in existing:
+                conn.execute(text("ALTER TABLE product_catalog ADD COLUMN image_url TEXT"))
 
     def drop_all(self) -> None:
         """

@@ -1,0 +1,190 @@
+{
+  "generated_at": "2026-05-11T09:30:42.029Z",
+  "entry_url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/?category=Network+Products&subCategory=Network+Cameras&checkedSubSeries=NONE",
+  "series": {
+    "Pro": {
+      "Product Categories": {
+        "series_l1": "Pro",
+        "series_l2": "Product Categories",
+        "series_l2_slug": "Pro-Series-EasyIP-",
+        "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/",
+        "breadcrumb": [],
+        "products": [
+          {
+            "model": "DS-2CD20123G2-LI-U-Y",
+            "name": "DS-2CD20123G2-LI(U)Y NEW 12MP Acusense Smart Hybrid Light Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd20123g2-li-u-y/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/"
+          },
+          {
+            "model": "DS-2CD20123G2-LIUY-S-L--RB-",
+            "name": "DS-2CD20123G2-LIUY/S(L)(RB) NEW 12MP Acusense Strobe Light and Audible Warning & Smart Hybrid Light Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd20123g2-liuy-s-l--rb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/"
+          },
+          {
+            "model": "DS-2CD2143G2-LIPTRZ-S2U-Y",
+            "name": "DS-2CD2143G2-LIPTRZ(S2U)Y NEW 4 MP AcuSense PTRZ Dome Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd2143g2-liptrz-s2u-y/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/"
+          },
+          {
+            "model": "DS-2CD23123G2-LI-2U-Y",
+            "name": "DS-2CD23123G2-LI(2U)Y NEW 12MP Acusense Smart Hybrid Light Fixed Turret Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd23123g2-li-2u-y/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/"
+          },
+          {
+            "model": "DS-2CD23123G2-LI2UY-S-L--RB-",
+            "name": "DS-2CD23123G2-LI2UY/S(L)(RB) NEW 12MP Acusense Strobe Light and Audible Warning & Smart Hybrid Light Fixed Turret Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd23123g2-li2uy-s-l--rb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/"
+          },
+          {
+            "model": "DS-2CD23127G3P-LIS2UY-S-L--RB-",
+            "name": "DS-2CD23127G3P-LIS2UY/S(L)(RB) NEW 12 MP Panoramic ColorVu Fixed Turret Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd23127g3p-lis2uy-s-l--rb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/"
+          },
+          {
+            "model": "DS-2CD23167G3P-LIS2UY-S-L--RB-",
+            "name": "DS-2CD23167G3P-LIS2UY/S(L)(RB) NEW 16 MP Panoramic ColorVu Fixed Turret Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd23167g3p-lis2uy-s-l--rb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/"
+          },
+          {
+            "model": "DS-2CD2387G3P-LIS2UY-S-L--RB-",
+            "name": "DS-2CD2387G3P-LIS2UY/S(L)(RB) NEW 8 MP Panoramic ColorVu Fixed Turret Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd2387g3p-lis2uy-s-l--rb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/"
+          },
+          {
+            "model": "DS-2CD2747G3-LIPTRZS2UY-S-L--RB-",
+            "name": "DS-2CD2747G3-LIPTRZS2UY/S(L)(RB) NEW 4 MP Smart Hybrid Light with ColorVu Motorized PTRZ Varifocal Dome Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd2747g3-liptrzs2uy-s-l--rb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/"
+          },
+          {
+            "model": "DS-2CD2H23G2-IZS",
+            "name": "DS-2CD2H23G2-IZS NEW 2 MP AcuSense Motorized Varifocal Turret Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd2h23g2-izs/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/"
+          },
+          {
+            "model": "DS-2CD2T123G2-2LI-2U--4LI-2U-Y",
+            "name": "DS-2CD2T123G2-2LI(2U)/4LI(2U)Y NEW 12MP Acusense Smart Hybrid Light Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd2t123g2-2li-2u--4li-2u-y/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/"
+          },
+          {
+            "model": "DS-2CD2T123G2-LIS2U-S-L--RB-Y",
+            "name": "DS-2CD2T123G2-LIS2U/S(L)(RB)Y NEW 12MP Acusense Strobe Light and Audible Warning & Smart Hybrid Light Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd2t123g2-lis2u-s-l--rb-y/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/"
+          }
+        ]
+      }
+    },
+    "Value": {
+      "Hikvision Value Series ExpressIP Network Cameras": {
+        "series_l1": "Value",
+        "series_l2": "Hikvision Value Series ExpressIP Network Cameras",
+        "series_l2_slug": "value-series",
+        "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/",
+        "breadcrumb": [
+          "Storage",
+          "Kits",
+          "DeepinMind Intelligence"
+        ],
+        "products": [
+          {
+            "model": "DS-2CD1027G3-LIU-F---SL---SRB-",
+            "name": "DS-2CD1027G3-LIU(F)(/SL)(/SRB) NEW 2 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1027g3-liu-f---sl---srb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/"
+          },
+          {
+            "model": "DS-2CD1047G3-LIU-F---SL---SRB-",
+            "name": "DS-2CD1047G3-LIU(F)(/SL)(/SRB) NEW 4 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1047g3-liu-f---sl---srb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/"
+          },
+          {
+            "model": "DS-2CD1047G3H-LIU-F---SL---SRB-",
+            "name": "DS-2CD1047G3H-LIU(F)(/SL)(/SRB) NEW 4 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1047g3h-liu-f---sl---srb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/"
+          },
+          {
+            "model": "DS-2CD1147G3H-LIU-F---SL---SRB-",
+            "name": "DS-2CD1147G3H-LIU(F)(/SL)(/SRB) NEW 4 MP ColorVu 3.0 Fixed Dome Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1147g3h-liu-f---sl---srb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/"
+          },
+          {
+            "model": "DS-2CD1327G3-LIU-F---SL---SRB-",
+            "name": "DS-2CD1327G3-LIU(F)(/SL)(/SRB) NEW 2 MP ColorVu 3.0 Fixed Turret Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1327g3-liu-f---sl---srb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/"
+          },
+          {
+            "model": "DS-2CD1347G3-LIU-F---SL---SRB-",
+            "name": "DS-2CD1347G3-LIU(F)(/SL)(/SRB) NEW 4 MP ColorVu 3.0 Fixed Turret Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1347g3-liu-f---sl---srb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/"
+          },
+          {
+            "model": "DS-2CD1347G3H-LIU-F---SL---SRB-",
+            "name": "DS-2CD1347G3H-LIU(F)(/SL)(/SRB) NEW 4 MP ColorVu 3.0 Fixed Turret Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1347g3h-liu-f---sl---srb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/"
+          },
+          {
+            "model": "DS-2CD1B27G3-LIU-F--LS-L--RB-",
+            "name": "DS-2CD1B27G3-LIU(F)/LS(L)(RB) NEW 2 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1b27g3-liu-f--ls-l--rb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/"
+          },
+          {
+            "model": "DS-2CD1B47G3-LIU-F--LS-L--RB-",
+            "name": "DS-2CD1B47G3-LIU(F)/LS(L)(RB) NEW 4 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1b47g3-liu-f--ls-l--rb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/"
+          },
+          {
+            "model": "DS-2CD1B47G3H-LIU-F---SL---SRB-",
+            "name": "DS-2CD1B47G3H-LIU(F)(/SL)(/SRB) NEW 4 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1b47g3h-liu-f---sl---srb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/"
+          },
+          {
+            "model": "DS-2CD1B67G3-LIU-F--LS-L--RB-",
+            "name": "DS-2CD1B67G3-LIU(F)/LS(L)(RB) NEW 6 MP ColorVu 3.0 Fixed Bullet Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1b67g3-liu-f--ls-l--rb-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/"
+          },
+          {
+            "model": "DS-2CD1F47G3H-LIU-F---SX-",
+            "name": "DS-2CD1F47G3H-LIU(F)(/SX) NEW 4 MP ColorVu 3.0 Fixed PT Network Camera",
+            "url": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/ds-2cd1f47g3h-liu-f---sx-/",
+            "series_page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/"
+          }
+        ]
+      }
+    },
+    "HiLook": {
+      "Value Series": {
+        "series_l1": "HiLook",
+        "series_l2": "Value Series",
+        "series_l2_slug": "Value-Camera",
+        "series_page": "https://www.hikvision.com/en/products/HiLook-IP-Products/Network-Cameras/Value-Camera/",
+        "breadcrumb": [
+          "PTZ Cameras",
+          "IP Kits",
+          "Cable Free"
+        ],
+        "products": []
+      }
+    }
+  }
+}
