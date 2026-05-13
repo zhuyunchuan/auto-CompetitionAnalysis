@@ -227,6 +227,22 @@ async function extractProSubseriesOptions() {
   ];
 }
 
+async function extractValueSubseriesOptions() {
+  return await page.evaluate(() => {
+    const inputs = Array.from(document.querySelectorAll('input[type="checkbox"][name="enquiryType"]'));
+    const labels = Array.from(document.querySelectorAll('input[type="checkbox"][name="enquiryType"] + label'));
+    const options = [];
+    for (let i = 0; i < inputs.length; i++) {
+      const value = inputs[i].getAttribute("value") || "";
+      const labelText = labels[i]?.textContent?.trim() || decodeURIComponent(value);
+      if (value && labelText && labelText.length > 1 && labelText.length < 100) {
+        options.push(labelText);
+      }
+    }
+    return options;
+  });
+}
+
 async function applySubseriesFilter(subseriesName) {
   const encoded = encodeURIComponent(subseriesName);
   await page.evaluate((encoded) => {
@@ -259,7 +275,7 @@ const structure = {
   generated_at: new Date().toISOString(),
   series: {},
   notes: [
-    "本结构为首次组织尝试：Pro 通过页面 Subseries 过滤器枚举；Value 暂按单一子系列；HiLook 按 Value Camera 页面枚举。",
+    "Pro 通过页面 Subseries 过滤器枚举；Value 系列通过 extractValueSubseriesOptions() 动态提取过滤器选项后枚举；HiLook 按 Value Camera 页面枚举。",
     "型号列表通过 View More/分页强制加载，尽量拉满页面可提供的全部型号。",
   ],
 };
@@ -290,7 +306,29 @@ for (const sub of proSubseries) {
 
 structure.series.Value = {};
 await gotoWithChallengeRetries(urls.value);
-{
+await forceLoadAllProducts(60);
+const valueSubseries = await extractValueSubseriesOptions();
+
+if (valueSubseries.length > 0) {
+  for (const sub of valueSubseries) {
+    await applySubseriesFilter(sub);
+    await page.waitForTimeout(3000);
+    const totalHint = await forceLoadAllProducts(240);
+    const products = await extractVisibleProducts();
+    const countHint = (() => {
+      if (totalHint && totalHint > 0) return totalHint;
+      return products.length;
+    })();
+    structure.series.Value[sub] = {
+      series_l1: "Value",
+      subseries: sub,
+      count_hint: countHint,
+      models_count: products.length,
+      models: products,
+      sample_models: products.slice(0, 30),
+    };
+  }
+} else {
   const totalHint = await forceLoadAllProducts(240);
   const products = await extractVisibleProducts();
   structure.series.Value["Value Series"] = {
@@ -321,7 +359,7 @@ await gotoWithChallengeRetries(urls.hilook);
 await writeFile(`${outDir}/structure_filtered.json`, JSON.stringify(structure, null, 2), "utf-8");
 console.log(`OUT_DIR=${outDir}`);
 console.log(
-  `PRO_SUBSERIES=${Object.keys(structure.series.Pro).length} VALUE_MODELS=${structure.series.Value['Value Series'].sample_models.length} HILOOK_MODELS=${structure.series.HiLook['Value Camera'].sample_models.length}`,
+  `PRO_SUBSERIES=${Object.keys(structure.series.Pro).length} VALUE_SUBSERIES=${Object.keys(structure.series.Value).length} HILOOK_MODELS=${structure.series.HiLook['Value Camera'].sample_models.length}`,
 );
 
 await page.close();
