@@ -269,7 +269,7 @@ const structure = {
   generated_at: new Date().toISOString(),
   series: {},
   notes: [
-    "Pro 通过页面 Subseries 过滤器枚举；Value 系列通过 extractValueSubseriesOptions() 动态提取过滤器选项后枚举；HiLook 按 Value Camera 页面枚举。",
+    "Pro 通过页面 Subseries 过滤器枚举；Value 系列通过 search_list.json API 按 Subseries 字段分组提取；HiLook 按 Value Camera 页面枚举。",
     "型号列表通过 View More/分页强制加载，尽量拉满页面可提供的全部型号。",
   ],
 };
@@ -300,25 +300,56 @@ for (const sub of proSubseries) {
 
 structure.series.Value = {};
 await gotoWithChallengeRetries(urls.value);
-await forceLoadAllProducts(60);
-const valueSubseries = await extractValueSubseriesOptions();
+await page.waitForTimeout(8000);
 
-if (valueSubseries.length > 0) {
-  for (const sub of valueSubseries) {
-    await applySubseriesFilter(sub);
-    await page.waitForTimeout(3000);
+const valueApiUrl = await page.evaluate(() => {
+  const pathParts = window.location.pathname.split("/").filter(Boolean);
+  const idx = pathParts.findIndex((p) => p === "products");
+  if (idx < 0) return null;
+  const contentPath = pathParts.slice(0, idx + 1).join("/");
+  return `https://www.hikvision.com/content/hikvision/en${contentPath}/jcr:content/root/responsivegrid/search_list.json`;
+});
+
+if (valueApiUrl) {
+  const apiData = await page.evaluate(async (url) => {
+    const res = await fetch(url);
+    return await res.json();
+  }, valueApiUrl);
+
+  if (apiData && apiData.products && Array.isArray(apiData.products)) {
+    const subseriesMap = {};
+    for (const p of apiData.products) {
+      const subseries = p.selectParameters?.Subseries?.[0] || p.subseries || "Value Series";
+      if (!subseriesMap[subseries]) subseriesMap[subseries] = [];
+      const model = (p.productModel || "").toUpperCase().trim();
+      const title = (p.title || model).replace(/\s+/g, " ").trim();
+      const detailPath = p.detailPath || "";
+      const url = detailPath ? `https://www.hikvision.com${detailPath}` : "";
+      const desc = (p.description || "").replace(/\s+/g, " ").trim();
+      if (model) {
+        subseriesMap[subseries].push({ model, name: title, url, description: desc });
+      }
+    }
+
+    for (const [subseries, products] of Object.entries(subseriesMap)) {
+      structure.series.Value[subseries] = {
+        series_l1: "Value",
+        subseries,
+        models_count: products.length,
+        models: products.sort((a, b) => a.model.localeCompare(b.model)),
+        sample_models: products.slice(0, 30),
+      };
+    }
+    console.log(`VALUE_SUBSERIES=${Object.keys(subseriesMap).length}`);
+  } else {
     const totalHint = await forceLoadAllProducts(240);
     const products = await extractVisibleProducts();
-    const countHint = (() => {
-      if (totalHint && totalHint > 0) return totalHint;
-      return products.length;
-    })();
-    structure.series.Value[sub] = {
+    structure.series.Value["Value Series"] = {
       series_l1: "Value",
-      subseries: sub,
-      count_hint: countHint,
+      subseries: "Value Series",
+      count_hint: totalHint && totalHint > 0 ? totalHint : products.length,
       models_count: products.length,
-      models: products,
+      models,
       sample_models: products.slice(0, 30),
     };
   }
@@ -330,7 +361,7 @@ if (valueSubseries.length > 0) {
     subseries: "Value Series",
     count_hint: totalHint && totalHint > 0 ? totalHint : products.length,
     models_count: products.length,
-    models: products,
+    models,
     sample_models: products.slice(0, 30),
   };
 }
