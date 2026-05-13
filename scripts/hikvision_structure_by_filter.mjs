@@ -235,7 +235,13 @@ async function extractValueSubseriesOptions() {
     for (let i = 0; i < inputs.length; i++) {
       const value = inputs[i].getAttribute("value") || "";
       const labelText = labels[i]?.textContent?.trim() || decodeURIComponent(value);
-      if (value && labelText && labelText.length > 1 && labelText.length < 100) {
+      if (
+        value &&
+        labelText &&
+        labelText.length > 1 &&
+        labelText.length < 100 &&
+        labelText.startsWith("Value Series")
+      ) {
         options.push(labelText);
       }
     }
@@ -245,29 +251,17 @@ async function extractValueSubseriesOptions() {
 
 async function applySubseriesFilter(subseriesName) {
   const encoded = encodeURIComponent(subseriesName);
-  await page.evaluate((encoded) => {
-    const all = Array.from(document.querySelectorAll('input[type=\"checkbox\"][name=\"enquiryType\"]'));
-    for (const el of all) {
-      el.checked = false;
-      el.dispatchEvent(new Event('change', { bubbles: true }));
+  const base = "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/";
+  const params = "category=Network+Products&subCategory=Network+Cameras&series=Value+Series";
+  const target = `${base}?${params}&checkedSubSeries=${encoded}`;
+  for (let retry = 0; retry < 5; retry++) {
+    try {
+      await page.goto(target, { waitUntil: "domcontentloaded", timeout: 60000 });
+      break;
+    } catch {
+      await page.waitForTimeout(3000);
     }
-    const target = document.querySelector(`input[type=\"checkbox\"][value=\"${encoded}\"]`);
-    if (target) {
-      target.checked = true;
-      target.dispatchEvent(new Event('change', { bubbles: true }));
-      target.dispatchEvent(new Event('click', { bubbles: true }));
-    }
-  }, encoded);
-
-  await page.evaluate(() => {
-    const btn =
-      document.querySelector("button.advanced-filter-submit") ||
-      Array.from(document.querySelectorAll("button, input[type=submit], a")).find((el) => {
-        const t = (el.textContent || "").trim().toLowerCase();
-        return t === "submit";
-      });
-    if (btn && typeof btn.click === "function") btn.click();
-  });
+  }
   await page.waitForTimeout(5000);
 }
 
