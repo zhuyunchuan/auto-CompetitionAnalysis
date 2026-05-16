@@ -213,88 +213,80 @@ async function extractProductCountHint() {
   });
 }
 
-async function extractProSubseriesOptions() {
-  return [
-    "EasyIP 4.0 with ColorVu",
-    "EasyIP 4.0 Series ColorVu",
-    "EasyIP 4.0 with AcuSense",
-    "EasyIP 3.0",
-    "EasyIP 2.0 Plus with AcuSense",
-    "EasyIP 2.0 Plus",
-    "EasyIP 1.0 Plus",
-    "EasyIP 4.0 Plus with ColorVu",
-    "EasyIP 4.0 Plus with AcuSense",
-  ];
-}
-
-async function extractValueSubseriesOptions() {
-  return await page.evaluate(() => {
-    const inputs = Array.from(document.querySelectorAll('input[type="checkbox"][name="enquiryType"]'));
-    const labels = Array.from(document.querySelectorAll('input[type="checkbox"][name="enquiryType"] + label'));
-    const options = [];
-    for (let i = 0; i < inputs.length; i++) {
-      const value = inputs[i].getAttribute("value") || "";
-      const labelText = labels[i]?.textContent?.trim() || decodeURIComponent(value);
-      if (
-        value &&
-        labelText &&
-        labelText.length > 1 &&
-        labelText.length < 100 &&
-        labelText.startsWith("Value Series")
-      ) {
-        options.push(labelText);
-      }
-    }
-    return options;
-  });
-}
-
-async function applySubseriesFilter(subseriesName) {
-  const encoded = encodeURIComponent(subseriesName);
-  const base = "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/value-series/";
-  const params = "category=Network+Products&subCategory=Network+Cameras&series=Value+Series";
-  const target = `${base}?${params}&checkedSubSeries=${encoded}`;
-  for (let retry = 0; retry < 5; retry++) {
-    try {
-      await page.goto(target, { waitUntil: "domcontentloaded", timeout: 60000 });
-      break;
-    } catch {
-      await page.waitForTimeout(3000);
-    }
-  }
-  await page.waitForTimeout(5000);
-}
-
 const structure = {
   generated_at: new Date().toISOString(),
   series: {},
   notes: [
-    "Pro 通过页面 Subseries 过滤器枚举；Value 系列通过 search_list.json API 按 Subseries 字段分组提取；HiLook 按 Value Camera 页面枚举。",
-    "型号列表通过 View More/分页强制加载，尽量拉满页面可提供的全部型号。",
+    "Pro 和 Value 系列均通过 search_list.json API 按 selectParameters.Subseries 字段分组提取；HiLook 按 Value Camera 页面枚举。",
+    "API 通过 page.evaluate 从浏览器上下文调用，避免 cookie/session 问题。",
   ],
 };
 
 structure.series.Pro = {};
 await gotoWithChallengeRetries(urls.pro);
-await forceLoadAllProducts(60);
-const proSubseries = await extractProSubseriesOptions();
+await page.waitForTimeout(8000);
 
-for (const sub of proSubseries) {
-  await applySubseriesFilter(sub);
+const proApiUrl = await page.evaluate(() => {
+  const pathParts = window.location.pathname.split("/").filter(Boolean);
+  const idx = pathParts.findIndex((p) => p === "products");
+  if (idx < 0) return null;
+  const contentPath = pathParts.slice(0, idx + 1).join("/");
+  return `https://www.hikvision.com/content/hikvision/en${contentPath}/jcr:content/root/responsivegrid/search_list.json`;
+});
+
+if (proApiUrl) {
+  const apiData = await page.evaluate(async (url) => {
+    const res = await fetch(url);
+    return await res.json();
+  }, proApiUrl);
+
+  if (apiData && apiData.products && Array.isArray(apiData.products)) {
+    const subseriesMap = {};
+    for (const p of apiData.products) {
+      const subseries = p.selectParameters?.Subseries?.[0] || p.subseries || "Pro Series";
+      if (!subseriesMap[subseries]) subseriesMap[subseries] = [];
+      const model = (p.productModel || "").toUpperCase().trim();
+      const title = (p.title || model).replace(/\s+/g, " ").trim();
+      const detailPath = p.detailPath || "";
+      const url = detailPath ? `https://www.hikvision.com${detailPath}` : "";
+      const desc = (p.description || "").replace(/\s+/g, " ").trim();
+      if (model) {
+        subseriesMap[subseries].push({ model, name: title, url, description: desc });
+      }
+    }
+
+    for (const [subseries, products] of Object.entries(subseriesMap)) {
+      structure.series.Pro[subseries] = {
+        series_l1: "Pro",
+        subseries,
+        models_count: products.length,
+        models: products.sort((a, b) => a.model.localeCompare(b.model)),
+        sample_models: products.slice(0, 30),
+      };
+    }
+    console.log(`PRO_SUBSERIES=${Object.keys(subseriesMap).length}`);
+  } else {
+    const totalHint = await forceLoadAllProducts(240);
+    const products = await extractVisibleProducts();
+    structure.series.Pro["Pro Series"] = {
+      series_l1: "Pro",
+      subseries: "Pro Series",
+      count_hint: totalHint && totalHint > 0 ? totalHint : products.length,
+      models_count: products.length,
+      models: products,
+      sample_models: products.slice(0, 30),
+    };
+  }
+} else {
   const totalHint = await forceLoadAllProducts(240);
   const products = await extractVisibleProducts();
-  const countHint = (() => {
-    const hint = totalHint ?? null;
-    if (hint && hint > 0) return hint;
-    return products.length;
-  })();
-  structure.series.Pro[sub] = {
+  structure.series.Pro["Pro Series"] = {
     series_l1: "Pro",
-    subseries: sub,
-    count_hint: countHint,
+    subseries: "Pro Series",
+    count_hint: totalHint && totalHint > 0 ? totalHint : products.length,
     models_count: products.length,
     models: products,
-    sample_models: products.slice(0, 20),
+    sample_models: products.slice(0, 30),
   };
 }
 
@@ -349,7 +341,7 @@ if (valueApiUrl) {
       subseries: "Value Series",
       count_hint: totalHint && totalHint > 0 ? totalHint : products.length,
       models_count: products.length,
-      models,
+      models: products,
       sample_models: products.slice(0, 30),
     };
   }
@@ -361,7 +353,7 @@ if (valueApiUrl) {
     subseries: "Value Series",
     count_hint: totalHint && totalHint > 0 ? totalHint : products.length,
     models_count: products.length,
-    models,
+    models: products,
     sample_models: products.slice(0, 30),
   };
 }
