@@ -16,11 +16,12 @@ const runId = new Date()
   .replace("T", "_")
   .slice(0, 15);
 
-const outDir = `/workspace/results/hikvision_structure_filtered_${runId}`;
+const outDir = `D:\\work\\auto-CompetitionAnalysis\\results\\hikvision_structure_filtered_${runId}`;
 await mkdir(outDir, { recursive: true });
 
 const browser = await chromium.launch({
   headless: true,
+  executablePath: "C:\\Users\\12298\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
   args: ["--no-sandbox", "--disable-dev-shm-usage"],
 });
 
@@ -227,11 +228,10 @@ await gotoWithChallengeRetries(urls.pro);
 await page.waitForTimeout(8000);
 
 const proApiUrl = await page.evaluate(() => {
-  const pathParts = window.location.pathname.split("/").filter(Boolean);
-  const idx = pathParts.findIndex((p) => p === "products");
-  if (idx < 0) return null;
-  const contentPath = pathParts.slice(0, idx + 1).join("/");
-  return `https://www.hikvision.com/content/hikvision/en${contentPath}/jcr:content/root/responsivegrid/search_list.json`;
+  const html = document.documentElement.innerHTML;
+  const m = html.match(/["'](\/content\/hikvision[^"']*\/responsivegrid\/(search_list[^"']*))["']/);
+  if (!m) return null;
+  return `https://www.hikvision.com${m[1]}.json`;
 });
 
 if (proApiUrl) {
@@ -295,11 +295,10 @@ await gotoWithChallengeRetries(urls.value);
 await page.waitForTimeout(8000);
 
 const valueApiUrl = await page.evaluate(() => {
-  const pathParts = window.location.pathname.split("/").filter(Boolean);
-  const idx = pathParts.findIndex((p) => p === "products");
-  if (idx < 0) return null;
-  const contentPath = pathParts.slice(0, idx + 1).join("/");
-  return `https://www.hikvision.com/content/hikvision/en${contentPath}/jcr:content/root/responsivegrid/search_list.json`;
+  const html = document.documentElement.innerHTML;
+  const m = html.match(/["'](\/content\/hikvision[^"']*\/responsivegrid\/(search_list[^"']*))["']/);
+  if (!m) return null;
+  return `https://www.hikvision.com${m[1]}.json`;
 });
 
 if (valueApiUrl) {

@@ -14,11 +14,12 @@ const runId = new Date()
   .replace("T", "_")
   .slice(0, 15);
 
-const outDir = `/workspace/results/dahua_wizsense_structure_${runId}`;
+const outDir = `D:\\work\\auto-CompetitionAnalysis\\results\\dahua_wizsense_structure_${runId}`;
 await mkdir(outDir, { recursive: true });
 
 const browser = await chromium.launch({
   headless: true,
+  executablePath: "C:\\Users\\12298\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
   args: ["--no-sandbox", "--disable-dev-shm-usage"],
 });
 
@@ -194,13 +195,7 @@ async function buildSeries(seriesUrl) {
   );
   const tabs = await discoverTabs();
 
-  const selectedTabs =
-    series_key === "WizSense 2"
-      ? tabs.filter((t) => {
-          const l = t.toLowerCase();
-          return l.includes("wizcolor") || l === "ir" || l.includes("smart dual light");
-        })
-      : tabs;
+  const selectedTabs = tabs;
 
   structure.series[series_key] = {
     series_l1: series_key,
@@ -232,6 +227,14 @@ console.log(`OUT_DIR=${outDir}`);
 console.log(
   `WIZSENSE2_SUBSERIES=${Object.keys(structure.series["WizSense 2"]?.subseries || {}).length} WIZSENSE3_SUBSERIES=${Object.keys(structure.series["WizSense 3"]?.subseries || {}).length}`,
 );
+console.log("WIZSENSE2_NAMES=" + JSON.stringify(Object.keys(structure.series["WizSense 2"]?.subseries || {})));
+console.log("WIZSENSE3_NAMES=" + JSON.stringify(Object.keys(structure.series["WizSense 3"]?.subseries || {})));
+console.log("WIZSENSE2_COUNTS=" + JSON.stringify(
+  Object.fromEntries(Object.entries(structure.series["WizSense 2"]?.subseries || {}).map(([k, v]) => [k, v.models_count]))
+));
+console.log("WIZSENSE3_COUNTS=" + JSON.stringify(
+  Object.fromEntries(Object.entries(structure.series["WizSense 3"]?.subseries || {}).map(([k, v]) => [k, v.models_count]))
+));
 
 await page.close();
 await browser.close();

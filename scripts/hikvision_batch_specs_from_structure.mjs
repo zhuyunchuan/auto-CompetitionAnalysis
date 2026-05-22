@@ -4,7 +4,7 @@ import { createWriteStream } from "node:fs";
 
 const structurePath =
   process.argv.find((a) => a.startsWith("--structure="))?.split("=", 2)[1] ||
-  "/workspace/results/hikvision_structure_filtered_20260511_102116/structure_filtered.json";
+  "D:\\work\\auto-CompetitionAnalysis\\results\\hikvision_structure_filtered_20260519_022954\\structure_filtered.json";
 
 const concurrencyArg = process.argv.find((a) => a.startsWith("--concurrency="))?.split("=", 2)[1];
 const concurrency = Math.max(1, Math.min(6, Number(concurrencyArg || "3") || 3));
@@ -20,7 +20,7 @@ const runId = new Date()
   .replace("T", "_")
   .slice(0, 15);
 
-const outDir = `/workspace/results/hikvision_specs_all_${runId}`;
+const outDir = `D:\\work\\auto-CompetitionAnalysis\\results\\hikvision_specs_all_${runId}`;
 await mkdir(outDir, { recursive: true });
 
 async function fileExists(p) {
@@ -193,6 +193,7 @@ const jsonlStream = createWriteStream(jsonlPath, { flags: "a" });
 
 const browser = await chromium.launch({
   headless: true,
+  executablePath: "C:\\Users\\12298\\AppData\\Local\\ms-playwright\\chromium-1223\\chrome-win64\\chrome.exe",
   args: ["--no-sandbox", "--disable-dev-shm-usage"],
 });
 
